@@ -7,7 +7,7 @@
 - [Introducción](#introducción)
 - [Objetivos](#Objetivos)
 - [Stack Tecnológico](#Stack-Tecnológico)
-- [Proceso ETL  (Extraer, Tranformar, Carga))](#Proceso-ETL-(Extraer,-Tranformar,-Carga))
+- [Proceso ETL  (Extraer, Tranformar, Carga))](#Proceso-ETL-(Extraer-Tranformar-Carga))
 - [Gantt Diagram](#gantt-diagram)
 - [Key Performance Indicators (KPIs)](#key-performance-indicators-kpis)
 - [Machine Learning Model](#machine-learning-model)
@@ -22,7 +22,7 @@
 
 # Stack Tecnológico 
 
-# Proceso ETL (Extraer, Tranformar, Carga)
+# Proceso ETL (Extraer-Tranformar-Carga)
 
 ⛏️ **Extracción de Data**
 
