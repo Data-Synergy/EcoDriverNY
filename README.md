@@ -58,7 +58,7 @@
           <img width="110" src="https://avatars.githubusercontent.com/u/138166529?v=4"/>
         </a>
         <a href="https://github.com/Karrion1987" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Allan Alvarez</br><small>Data Scientist</small></h4>
+          <h4 style="margin-top: 1rem;">Allan Alvarez</br><small>............</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/Karrion1987" target="_blank">
@@ -94,7 +94,7 @@
           <img width="110" src="https://avatars.githubusercontent.com/u/124707045?v=4"/>
         </a>
         <a href="https://github.com/EliasIchi" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Elias Almada</br><small>Machine Learning Developer.</small></h4>
+          <h4 style="margin-top: 1rem;">Elias Almada</br><small>.............</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/EliasIchi" target="_blank">
@@ -116,7 +116,7 @@
           <img width="110" src="https://avatars.githubusercontent.com/u/138503506?v=4"/>
         </a>
         <a href="https://github.com/dunietmg" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Duniet Marrero Garcia</br><small>Analista de Bi</small></h4>
+          <h4 style="margin-top: 1rem;">Duniet Marrero Garcia</br><small>............</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/dunietmg" target="_blank">
@@ -134,7 +134,7 @@
           <img width="110" src="https://media.licdn.com/dms/image/D4D03AQGx5U99T09Hzw/profile-displayphoto-shrink_400_400/0/1698425666147?e=1715817600&v=beta&t=a1b7NyKoTMcZH6I4fMaTzSm8HlZd0TdWS9wDfOV5-qs"/>
         </a>
         <a href="https://github.com/paulusbrizzi" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Pablo Brizzi</br><small>Data Engineer</small></h4>
+          <h4 style="margin-top: 1rem;">Pablo Brizzi</br><small>...........</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/paulusbrizzi" target="_blank">
