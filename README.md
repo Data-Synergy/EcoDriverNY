@@ -20,6 +20,12 @@
 
 # Objetivos
 
+🚕 Promover la adopción de vehículos eléctricos: Uno de nuestros principales objetivos es convencer al propietario del proyecto de la efectividad de los vehículos eléctricos como solución para reducir la contaminación ambiental causada por los servicios de transporte que utilizan combustibles fósiles, como los taxis. Nuestro objetivo es presentar argumentos sólidos respaldados por datos y análisis que demuestren los beneficios económicos y ambientales de la transición a los vehículos eléctricos.
+
+🧠 Desarrollar un modelo de Machine Learning para la predicción de CO2: Otro objetivo fundamental es crear un modelo de Machine Learning capaz de predecir la concentración de dióxido de carbono (CO2) en el aire de Manhattan para los próximos meses y años. Este modelo proporcionará una mejor comprensión de las tendencias de las emisiones de carbono y ayudará a tomar decisiones informadas sobre políticas ambientales y de transporte.
+
+📊 Cree un panel de análisis de viajes interactivo: para brindar una visión integral de la movilidad en Manhattan, planeamos desarrollar un panel interactivo que muestre análisis detallados de los viajes en taxi, así como de empresas de transporte urbano de alto volumen como Uber y Lyft, en los 69 kilómetros de la ciudad. barrios. Este panel permitirá a la empresa explorar patrones de viaje, tendencias de demanda y otros datos relevantes, tomando decisiones basadas en datos para mejorar la movilidad urbana y reducir el impacto ambiental.
+
 # Stack Tecnológico 
 
 # Proceso ETL (Extraer-Tranformar-Carga)
