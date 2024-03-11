@@ -10,7 +10,7 @@
 - [Proceso ETL (Extraer-Tranformar-Carga)](https://github.com/Data-Synergy/EcoDriverNY/blob/main/README.md#proceso-etl-extraer-tranformar-carga))
 - [Diagrama Gantt](#gantt-diagram)
 - [Performance de Indicadores Claves (KPIs)](#Performance-de-Indicadores-Claves-(KPIs))
-- [Modelo Machine Learning](#Modelo-Machine-Learning)
+- [Modelo Machine Learning](https://github.com/Data-Synergy/EcoDriverNY/blob/main/README.md#modelo-machine-learning)
 - [API](#api)
 - [Fuentes de Datos](#Fuentes-de-Datos)
 - [Equipo](#Equipo)
