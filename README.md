@@ -8,12 +8,12 @@
 - [Objetivos](#Objetivos)
 - [Stack Tecnológico](#Stack-Tecnológico)
 - [Proceso ETL (Extraer-Tranformar-Carga)](https://github.com/Data-Synergy/EcoDriverNY/blob/main/README.md#proceso-etl-extraer-tranformar-carga))
-- [Gantt Diagram](#gantt-diagram)
-- [Key Performance Indicators (KPIs)](#key-performance-indicators-kpis)
-- [Machine Learning Model](#machine-learning-model)
+- [Diagrama Gantt](#gantt-diagram)
+- [Performance de Indicadores Claves (KPIs)](#Performance-de-Indicadores-Claves-(KPIs))
+- [Modelo Machine Learning](#Modelo-Machine-Learning)
 - [API](#api)
-- [Data Source](#data-source)
-- [Contributors](#contributors)
+- [Fuentes de Datos](#Fuentes-de-Datos)
+- [Equipo](#Equipo)
 
 
 # Introducción
@@ -31,11 +31,11 @@
 💽 **Carga en el Data Warehouse**
 
 
-# Data Source
+# Fuentes de Datos
 
-# Gantt Diagram
+# Diagrama Gantt
 
-# Key Performance Indicators (KPIs)
+# Performance de Indicadores Claves (KPIs)
 
 # Machine Learning Model
 
