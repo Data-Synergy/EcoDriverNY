@@ -37,7 +37,7 @@
 
 # Performance de Indicadores Claves (KPIs)
 
-# Machine Learning Model
+# Modelo Machine Learning 
 
 # Equipo
 
