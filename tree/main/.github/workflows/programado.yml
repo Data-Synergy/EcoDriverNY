@@ -1,0 +1,31 @@
+name: Envio_base_cs
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    
+    - cron: '30 20 * * mon'   # Ejecutar a las 17 30 de lunes a viernes
+ 
+jobs:
+  ejecutar-script-de-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout código
+      uses: actions/checkout@v2
+
+    - name: Configurar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.11
+
+    - name: Instalar dependencias
+      run: |
+        pip install pandas google-auth pandas-gbq
+
+
+
+    - name: Ejecutar script de Python
+      run: |
+        python automatizado.py
