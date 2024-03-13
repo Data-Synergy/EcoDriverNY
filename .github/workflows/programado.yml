@@ -5,8 +5,7 @@ on:
       - main
   schedule:
     
-    - cron: '30 20 * * mon'   # Ejecutar a las 17 30 de lunes a viernes
-    - cron: '0 22 * * mon'   # Ejecutar a las 18 15 de lunes a viernes
+    -  cron: '40 21 * * MON-FRI'   #  # Ejecutar a las 18 15 de lunes a viernes
 
  
 jobs:
