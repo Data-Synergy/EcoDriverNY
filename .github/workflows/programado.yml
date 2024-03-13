@@ -6,6 +6,8 @@ on:
   schedule:
     
     - cron: '30 20 * * mon'   # Ejecutar a las 17 30 de lunes a viernes
+    - cron: '15 21 * * mon'   # Ejecutar a las 18 15 de lunes a viernes
+
  
 jobs:
   ejecutar-script-de-python:
