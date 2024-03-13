@@ -1,4 +1,4 @@
-name: Envio_base_cs
+name: bigquery
 on:
   push:
     branches:
@@ -28,4 +28,4 @@ jobs:
 
     - name: Ejecutar script de Python
       run: |
-        python automatizado.py
+        python Automatizado.py
