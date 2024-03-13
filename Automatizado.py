@@ -28,7 +28,7 @@ except Exception as e:
     print(f"No se pudo cargar el archivo {nombre_archivo}: {e}")
 
 credentials, project_id = load_credentials_from_file(
-    "/Workspace/Users/eliasemanuelalmada5757@gmail.com/basestaxis/automatizacion-taxis-nyc-d47c13651bca.json"
+    "https://github.com/Data-Synergy/EcoDriverNY/blob/main/automatizacion-taxis-nyc-d47c13651bca.json"
 )
 
 # Asignar el ID del proyecto a la variable project_id
