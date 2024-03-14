@@ -145,6 +145,24 @@
         </a>
         </div>
       </div>
+
+  <td align='center'>
+      <div >
+        <a href="https://github.com/TRAZE42" target="_blank" rel="author">
+          <img width="110" src="https://media.licdn.com/dms/image/D4E03AQEQweg5Ecvn9A/profile-displayphoto-shrink_800_800/0/1693008264319?e=1715817600&v=beta&t=rvqNVGo-C3rT5WYvMeFVaRu1Yqtq05RcQB-CkcNQk-I"/>
+        </a>
+        <a href="https://github.com/TRAZE42" target="_blank" rel="author">
+          <h4 style="margin-top: 1rem;">Paul Jauregui</br><small>...........</small></h4>
+        </a>
+        <div style='display: flex; flex-direction: column'>
+        <a href="https://github.com/TRAZE42" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/static/v1?style=for-the-badge&message=GitHub&color=172B4D&logo=GitHub&logoColor=FFFFFF&label="/>
+        </a>
+        <a href="https://www.linkedin.com/in/paul-andr%C3%A9-/" target="_blank">
+          <img style='width:8rem' src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>
+        </a>
+        </div>
+      </div>
     </td>
   
 
