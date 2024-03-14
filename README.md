@@ -29,15 +29,27 @@
 # Stack Tecnológico 
 
 # Proceso ETL (Extraer-Tranformar-Carga)
+En el contexto de nuestras operaciones de procesamiento de datos, hemos implementado un riguroso proceso ETL (Extracción, Transformación, Carga) utilizando el orquestador de flujo avanzado, Mage.ai, el reemplazo actual de Apache Airflow. Este proceso ha sido cuidadosamente diseñado para abordar las complejidades inherentes de los datos relacionados con diversos modos de transporte en la ciudad de Nueva York.
 
 ⛏️ **Extracción de Data**
+Para obtener una fuente de datos confiable y completa, realizamos un proceso de web scraping en el sitio web oficial de la Comisión de Taxis y Limusinas de la ciudad de Nueva York. Utilizamos esta técnica para recopilar archivos Parquet que contienen datos históricos sobre viajes realizados en varios tipos de vehículos, incluidos taxis amarillos, taxis verdes, vehículos de alquiler y vehículos de alquiler de gran volumen.
+
+Además, mejoramos nuestro conjunto de datos incorporando información histórica sobre las concentraciones de monóxido de carbono (CO) en Manhattan a través de la API OpenWeather. Este enfoque integral nos permitió enriquecer nuestra comprensión de los factores ambientales que pueden influir en los patrones de movilidad de la ciudad.
 
 🧹 **Limpieza y Transformación de Data**
 
 💽 **Carga en el Data Warehouse**
-
+Una vez que los datos estuvieron limpios, estandarizados y enriquecidos, procedimos a exportarlos a nuestro Data Warehouse, específicamente a tablas de BigQuery. Este paso es crucial para permitir análisis avanzados y consultas de alto rendimiento que impulsen nuestros procesos de toma de decisiones estratégicas.
 
 # Fuentes de Datos
+Nuestro proyecto se basa en datos de diversas fuentes para realizar un análisis exhaustivo. Estas fuentes de datos son esenciales para proporcionar información sobre diferentes aspectos del transporte y el impacto ambiental en Manhattan, Nueva York.
+
+Comisión de Taxis y Limusinas de Nueva York (TLC) : utilizamos datos históricos y actuales sobre viajes de varios tipos de servicios de transporte público en la ciudad de Nueva York. Esta fuente de datos ofrece información valiosa sobre los servicios de taxi, incluidos los taxis amarillos, los taxis verdes y más. Puede acceder a los datos en [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) .
+
+Datos de contaminación del aire de la API de OpenWeather.org : recopilamos datos sobre la calidad del aire en función de las coordenadas de Manhattan. Esta fuente de datos nos permite monitorear los niveles de contaminación del aire y su impacto en la ciudad. Para obtener más información, visite OpenWeather.org API - [Contaminación del aire](https://openweathermap.org/api/air-pollution) 
+[Enviromental and Health Dat aPortal](https://a816-dohbesp.nyc.gov/IndicatorPublic/)
+
+Datos del proyecto sobre ruido : para comprender la contaminación acústica en Manhattan, utilizamos datos filtrados para zonas y vecindarios específicos. Estos datos nos ayudan a evaluar los niveles de ruido en diferentes áreas y sus posibles efectos. Puede acceder a los datos en [Datos del proyecto de ruido](https://noiseproject.org/data-download/)
 
 # Diagrama Gantt
 
