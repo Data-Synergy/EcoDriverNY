@@ -36,27 +36,20 @@ En este sentido, la empresa de taxis “EcoDriveNy” se encuentra en un momento
 
 
 
-# Objetivos del Proyecto
-
-📊 Analizar los costos y beneficios de los vehículos eléctricos comparados con los convencionales y la viabilidad en su implementación.
-
-🧠 Evaluar la disponibilidad y requerimientos de la infraestructura de carga para la implementación gradual de vehículos eléctricos a la flota de la empresa.
-
-🚕 Analizar el impacto ambiental y sonoro generado por el transporte de pasajeros en la ciudad de Nueva York, calidad del aire, emisiones de CO2, y correlación con los patrones de movimiento de los vehículos.
-
-🧠   Implementar modelos de machine learning que analicen y predigan patrones de movilidad, demanda de transporte y su relación con factores ambientales, enfocados en optimizar la operación de la flota, la eficiencia del servicio y reducir el impacto ambiental.
-Proponer estrategias de marketing innovadoras y sostenibles para promover el uso de transporte de pasajeros más ecológico, campañas microsegmentadas y materiales de comunicación que resalten los beneficios ambientales del transporte sostenible.
-
- Desarrollar un modelo de Machine Learning para la predicción de CO2: Otro objetivo fundamental es crear un modelo de Machine Learning capaz de predecir la concentración de dióxido de carbono (CO2) en el aire de Manhattan para los próximos meses y años. Este modelo proporcionará una mejor comprensión de las tendencias de las emisiones de carbono y ayudará a tomar decisiones informadas sobre políticas ambientales y de transporte.
-
- 
-📊 Cree un panel de análisis de viajes interactivo: para brindar una visión integral de la movilidad en Manhattan, planeamos desarrollar un panel interactivo que muestre análisis detallados de los viajes en taxi, así como de empresas de transporte urbano de alto volumen como Uber y Lyft, en los 69 kilómetros de la ciudad. barrios. Este panel permitirá a la empresa explorar patrones de viaje, tendencias de demanda y otros datos relevantes, tomando decisiones basadas en datos para mejorar la movilidad urbana y reducir el impacto ambiental.
+![Objetivos](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Objetivos.jpg)
 
 
-🚕 Promover la adopción de vehículos eléctricos: Uno de nuestros principales objetivos es convencer al propietario del proyecto de la efectividad de los vehículos eléctricos como solución para reducir la contaminación ambiental causada por los servicios de transporte que utilizan combustibles fósiles, como los taxis. Nuestro objetivo es presentar argumentos sólidos respaldados por datos y análisis que demuestren los beneficios económicos y ambientales de la transición a los vehículos eléctricos.
 
-# Metodologia de Trabajo 
-## Diagrama Gantt
+# Alcance del Proyecto
+
+El proyecto abarcará desde la recopilación y depuración de datos de múltiples fuentes, incluyendo información proporcionada por la Comisión de Taxis y Limusinas de Nueva York y otros organismos relevantes, hasta la implementación y puesta en producción de modelos de machine learning. 
+
+El informe final proporcionará a la emprea una compresión profunda de los desafios y oportunidades relacionados con la sostenibilidad en el transporte de pasajeros en la ciudad de Nueva York; Implementación gradual de vehiculos elétricos, estrategias de marketing sostenible y la optimización de la operación de la flota
+
+Además se pretende que el proyecto contribuya, más allá de las fronteras de la empresa, al avance del conocimiento en el campo de la movilidad urbana sostenible y se posicione como un referente para otras empresas del sector.
+
+# Metodologia de Trabajo
+
 ![Diagrama](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png)
 
 
@@ -96,12 +89,7 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
 
 # API
 
-# Alcance del Proyecto
 
-El proyecto abarcará desde la recopilación y depuración de datos de múltiples fuentes, incluyendo información proporcionada por la Comisión de Taxis y Limusinas de Nueva York y otros organismos relevantes, hasta la implementación y puesta en producción de modelos de machine learning. 
-Se explorarán diversas métricas e indicadores relacionados con la duración de los viajes, la demanda de transporte, la calidad del aire, la contaminación sonora y otros factores relevantes.
-El informe final proporcionará a la empresa una comprensión profunda de los desafíos y oportunidades relacionados con la sostenibilidad en el transporte de pasajeros en la ciudad de Nueva York. Los resultados incluirán recomendaciones concretas para la implementación de vehículos eléctricos, estrategias de marketing sostenible y la optimización de la operación de la flota. 
-Además se pretende que el proyecto contribuya, más allá de las fronteras de la empresa, al avance del conocimiento en el campo de la movilidad urbana sostenible y se posicione como un referente para otras empresas del sector.
 
 
 # Equipo
