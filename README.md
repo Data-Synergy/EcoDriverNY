@@ -4,10 +4,10 @@
 <div>
     <div align='center'>
     <a href=".........." target="_blank" target="_blank">
-          <img  src="https://github.com/karinakozlowski/Data_Siniestros_Viales/blob/main/6_Assets/BotonAPP.png"/>
+          <img  src="img/h.png"/>
        </a>
    <a href="..................">
-          <img  src="https://github.com/karinakozlowski/Data_Siniestros_Viales/blob/main/6_Assets/Boton01.png"/>
+          <img  src="img/p.png"/>
       </a>
       </div>
 </div>
