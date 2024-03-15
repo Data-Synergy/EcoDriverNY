@@ -12,7 +12,10 @@
       </div>
 </div>
 
+# Contexto
+“OneNYC 2050” es una iniciativa de la ciudad de Nueva York que buscaabordar los desafíos futuros mediante la transformación hacia una ciudadalimentada 100% por energías renovables, eliminando el uso de loscombustibles fósiles.
 
+En este sentido la empresa de taxis 'EcoDriveNY' se encuentra en un momento crucial para su expansión y transformación hacia la sostenbilidad, adaptandose a lastendencias del mercado y promoviendo un trnasporte de pasajeros más limpio en Nueva York.
 
 # Indice
 - [Introducción](#introducción)
@@ -30,6 +33,8 @@
 # Introducción
 La movilidad urbana sostenible es una prioridad creciente en el contexto global y en este sentido la ciudad de Nueva York no es la excepción, en los últimos años, varios líderes de esta ciudad se han unido en la iniciativa ‘OneNYC 2050′ para construir alternativas que permitan a todos los habitantes de la conocida ‘Capital del mundo’ combatir los desafíos que se aproximan, entre ellos, transformar la manera de consumir energía en la ciudad, que gradualmente se convertiría en energía 100 % renovable, para decirle adiós a los combustibles fósiles.
 En este sentido, la empresa de taxis “EcoDriveNy” se encuentra en un momento crucial para su expansión y transformación. Con una visión hacia un futuro menos contaminado y una adaptación a las tendencias de mercado actuales, se propone un proceso integral de análisis y transición hacia la sostenibilidad en el transporte de pasajeros en la “ciudad que nunca duerme”.
+
+
 
 # Objetivos del Proyecto
 
@@ -50,9 +55,17 @@ Proponer estrategias de marketing innovadoras y sostenibles para promover el uso
 
 🚕 Promover la adopción de vehículos eléctricos: Uno de nuestros principales objetivos es convencer al propietario del proyecto de la efectividad de los vehículos eléctricos como solución para reducir la contaminación ambiental causada por los servicios de transporte que utilizan combustibles fósiles, como los taxis. Nuestro objetivo es presentar argumentos sólidos respaldados por datos y análisis que demuestren los beneficios económicos y ambientales de la transición a los vehículos eléctricos.
 
+# Metodologia de Trabajo 
+## Diagrama Gantt
+![Diagrama](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png)
+
+
 
 # Stack Tecnológico 
 
+ ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Lamina%20Arquitectura%201.jpg)
+
+ 
 # Proceso ETL (Extraer-Tranformar-Carga)
 En el contexto de nuestras operaciones de procesamiento de datos, hemos implementado un riguroso proceso ETL (Extracción, Transformación, Carga) utilizando el orquestador de flujo avanzado, Mage.ai, el reemplazo actual de Apache Airflow. Este proceso ha sido cuidadosamente diseñado para abordar las complejidades inherentes de los datos relacionados con diversos modos de transporte en la ciudad de Nueva York.
 
@@ -76,7 +89,6 @@ Datos de contaminación del aire de la API de OpenWeather.org : recopilamos dato
 
 Datos del proyecto sobre ruido : para comprender la contaminación acústica en Manhattan, utilizamos datos filtrados para zonas y vecindarios específicos. Estos datos nos ayudan a evaluar los niveles de ruido en diferentes áreas y sus posibles efectos. Puede acceder a los datos en [Datos del proyecto de ruido](https://noiseproject.org/data-download/)
 
-# Diagrama Gantt
 
 # Performance de Indicadores Claves (KPIs)
 
