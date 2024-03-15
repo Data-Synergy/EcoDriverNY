@@ -36,8 +36,8 @@ La movilidad urbana sostenible es una prioridad creciente en el contexto global 
 En este sentido, la empresa de taxis “EcoDriveNy” se encuentra en un momento crucial para su expansión y transformación. Con una visión hacia un futuro menos contaminado y una adaptación a las tendencias de mercado actuales, se propone un proceso integral de análisis y transición hacia la sostenibilidad en el transporte de pasajeros en la “ciudad que nunca duerme”.
 
 
-
-![Objetivos](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Objetivos.jpg)
+# Objetivos
+![Objetivos](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Objetivos2.jpg)
 
 
 
