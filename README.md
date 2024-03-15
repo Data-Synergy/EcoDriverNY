@@ -89,10 +89,10 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
     <td align='center'>
       <div >
         <a href="https://github.com/Karrion1987" target="_blank" rel="author">
-          <img width="110" src="https://avatars.githubusercontent.com/u/138166529?v=4"/>
+          <img width="110" src="https://raw.githubusercontent.com/Data-Synergy/EcoDriverNY/main/img/Group%2033.png"/>
         </a>
         <a href="https://github.com/Karrion1987" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Allan Alvarez</br><small>............</small></h4>
+          <h4 style="margin-top: 1rem;">Allan Alvarez</br><small>Data Scientist</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/Karrion1987" target="_blank">
@@ -107,10 +107,10 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
     <td align='center'>
       <div >
         <a href="https://github.com/karinakozlowski" target="_blank" rel="author">
-          <img width="110" src="https://raw.githubusercontent.com/karinakozlowski/imagenes/main/No%20country2.jpg"/>
+          <img width="110" src="https://raw.githubusercontent.com/Data-Synergy/EcoDriverNY/main/img/Group%2037.png"/>
         </a>
         <a href="https://github.com/karinakozlowski" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Karina Kozlowski</br><small>Data Engineer</small></h4>
+          <h4 style="margin-top: 1rem;">Karina Kozlowski</br><small>Data Science</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/karinakozlowski" target="_blank">
@@ -125,10 +125,10 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
     <td align='center'>
       <div >
         <a href="https://github.com/EliasIchi" target="_blank" rel="author">
-          <img width="110" src="https://avatars.githubusercontent.com/u/124707045?v=4"/>
+          <img width="110" src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Group%2036.png"/>
         </a>
         <a href="https://github.com/EliasIchi" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Elias Almada</br><small>.............</small></h4>
+          <h4 style="margin-top: 1rem;">Elias Almada</br><small>Data Analyst</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/EliasIchi" target="_blank">
@@ -147,10 +147,10 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
 <td align='center'>
       <div >
         <a href="https://github.com/dunietmg" target="_blank" rel="author">
-          <img width="110" src="https://avatars.githubusercontent.com/u/138503506?v=4"/>
+          <img width="110" src="https://raw.githubusercontent.com/Data-Synergy/EcoDriverNY/main/img/Group%2038.png"/>
         </a>
         <a href="https://github.com/dunietmg" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Duniet Marrero Garcia</br><small>............</small></h4>
+          <h4 style="margin-top: 1rem;">Duniet Marrero Garcia</br><small> Data Engineer</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/dunietmg" target="_blank">
@@ -165,10 +165,10 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
 <td align='center'>
       <div >
         <a href="https://github.com/paulusbrizzi" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4D03AQGx5U99T09Hzw/profile-displayphoto-shrink_400_400/0/1698425666147?e=1715817600&v=beta&t=a1b7NyKoTMcZH6I4fMaTzSm8HlZd0TdWS9wDfOV5-qs"/>
+          <img width="110" src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Group%2034.png"/>
         </a>
         <a href="https://github.com/paulusbrizzi" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Pablo Brizzi</br><small>...........</small></h4>
+          <h4 style="margin-top: 1rem;">Pablo Brizzi</br><small>Data Engineer.</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/paulusbrizzi" target="_blank">
@@ -183,10 +183,10 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
   <td align='center'>
       <div >
         <a href="https://github.com/TRAZE42" target="_blank" rel="author">
-          <img width="110" src="https://media.licdn.com/dms/image/D4E03AQEQweg5Ecvn9A/profile-displayphoto-shrink_800_800/0/1693008264319?e=1715817600&v=beta&t=rvqNVGo-C3rT5WYvMeFVaRu1Yqtq05RcQB-CkcNQk-I"/>
+          <img width="110" src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Group%2035.png"/>
         </a>
         <a href="https://github.com/TRAZE42" target="_blank" rel="author">
-          <h4 style="margin-top: 1rem;">Paul Jauregui</br><small>...........</small></h4>
+          <h4 style="margin-top: 1rem;">Paul Jauregui</br><small>Data Analyst</small></h4>
         </a>
         <div style='display: flex; flex-direction: column'>
         <a href="https://github.com/TRAZE42" target="_blank">
