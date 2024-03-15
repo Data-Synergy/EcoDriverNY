@@ -32,6 +32,7 @@ En este sentido la empresa de taxis 'EcoDriveNY' se encuentra en un momento cruc
 
 # Introducción
 La movilidad urbana sostenible es una prioridad creciente en el contexto global y en este sentido la ciudad de Nueva York no es la excepción, en los últimos años, varios líderes de esta ciudad se han unido en la iniciativa ‘OneNYC 2050′ para construir alternativas que permitan a todos los habitantes de la conocida ‘Capital del mundo’ combatir los desafíos que se aproximan, entre ellos, transformar la manera de consumir energía en la ciudad, que gradualmente se convertiría en energía 100 % renovable, para decirle adiós a los combustibles fósiles.
+
 En este sentido, la empresa de taxis “EcoDriveNy” se encuentra en un momento crucial para su expansión y transformación. Con una visión hacia un futuro menos contaminado y una adaptación a las tendencias de mercado actuales, se propone un proceso integral de análisis y transición hacia la sostenibilidad en el transporte de pasajeros en la “ciudad que nunca duerme”.
 
 
@@ -62,15 +63,15 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 # Proceso ETL (Extraer-Tranformar-Carga)
 En el contexto de nuestras operaciones de procesamiento de datos, hemos implementado un riguroso proceso ETL (Extracción, Transformación, Carga) utilizando el orquestador de flujo avanzado, Mage.ai, el reemplazo actual de Apache Airflow. Este proceso ha sido cuidadosamente diseñado para abordar las complejidades inherentes de los datos relacionados con diversos modos de transporte en la ciudad de Nueva York.
 
-⛏️ **Extracción de Data**
+⛏️ **Extracción de Data y Limpieza y Transformación de Data****
 Para obtener una fuente de datos confiable y completa, realizamos un proceso de web scraping en el sitio web oficial de la Comisión de Taxis y Limusinas de la ciudad de Nueva York. Utilizamos esta técnica para recopilar archivos Parquet que contienen datos históricos sobre viajes realizados en varios tipos de vehículos, incluidos taxis amarillos, taxis verdes, vehículos de alquiler y vehículos de alquiler de gran volumen.
 
 Además, mejoramos nuestro conjunto de datos incorporando información histórica sobre las concentraciones de monóxido de carbono (CO) en Manhattan a través de la API OpenWeather. Este enfoque integral nos permitió enriquecer nuestra comprensión de los factores ambientales que pueden influir en los patrones de movilidad de la ciudad.
 
-🧹 **Limpieza y Transformación de Data**
 
 💽 **Carga en el Data Warehouse**
 Una vez que los datos estuvieron limpios, estandarizados y enriquecidos, procedimos a exportarlos a nuestro Data Warehouse, específicamente a tablas de BigQuery. Este paso es crucial para permitir análisis avanzados y consultas de alto rendimiento que impulsen nuestros procesos de toma de decisiones estratégicas.
+
 
 # Fuentes de Datos
 Nuestro proyecto se basa en datos de diversas fuentes para realizar un análisis exhaustivo. Estas fuentes de datos son esenciales para proporcionar información sobre diferentes aspectos del transporte y el impacto ambiental en Manhattan, Nueva York.
@@ -81,6 +82,7 @@ Datos de contaminación del aire de la API de OpenWeather.org : recopilamos dato
 [Enviromental and Health Dat aPortal](https://a816-dohbesp.nyc.gov/IndicatorPublic/)
 
 Datos del proyecto sobre ruido : para comprender la contaminación acústica en Manhattan, utilizamos datos filtrados para zonas y vecindarios específicos. Estos datos nos ayudan a evaluar los niveles de ruido en diferentes áreas y sus posibles efectos. Puede acceder a los datos en [Datos del proyecto de ruido](https://noiseproject.org/data-download/)
+
 
 
 # Performance de Indicadores Claves (KPIs)
