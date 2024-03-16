@@ -12,6 +12,7 @@
       </div>
 </div>
 
+
 # Inotrducción
 “OneNYC 2050” es una iniciativa de la ciudad de Nueva York que busca abordar los desafíos futuros mediante la transformación hacia una ciudad alimentada 100% por energías renovables, eliminando el uso de los combustibles fósiles.
 
@@ -32,12 +33,6 @@ La movilidad urbana sostenible es una prioridad creciente en el contexto global 
 - [Equipo](#Equipo)
 
 
-
-# Objetivos
-![Objetivos](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Objetivos2.jpg)
-
-
-
 # Alcance del Proyecto
 
 El proyecto abarcará desde la recopilación y depuración de datos de múltiples fuentes, incluyendo información proporcionada por la Comisión de Taxis y Limusinas de Nueva York y otros organismos relevantes, hasta la implementación y puesta en producción de modelos de machine learning. 
@@ -48,8 +43,27 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
 # Metodologia de Trabajo
 
-![Diagrama](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png)
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #1 </summary>
 
+  <p>
+    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png" alt="Diagrama">
+  </p>
+</details>
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #2 </summary>
+
+  <p>
+    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png" alt="Diagrama">
+  </p>
+</details>
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #3 </summary>
+
+  <p>
+    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png" alt="Diagrama">
+  </p>
+</details>
 
 
 # Stack Tecnológico 
