@@ -1,6 +1,8 @@
 import os
 import pandas as pd
 from datetime import datetime, timedelta
+from google.auth import load_credentials_from_file
+from pandas.io import gbq
 import gcsfs
 
 # Obtener la fecha actual
@@ -26,17 +28,13 @@ try:
 except Exception as e:
     print(f"No se pudo cargar el archivo {nombre_archivo}: {e}")
 
-# Obtener la clave secreta de GitHub
-bucket_secret = os.getenv("bucketgcp")
-
-# Especifica el nombre del bucket y el nombre del archivo Parquet
-bucket_name = "bucketpgrupal"
-archivo_nombre = nombre_archivo
-
 # Crear un cliente de Google Cloud Storage con las credenciales proporcionadas
-fs = gcsfs.GCSFileSystem(token=bucket_secret)
+credentials_json = os.getenv('BUCKETGCP')
+fs = gcsfs.GCSFileSystem(token=credentials_json)
 
 # Guardar el DataFrame como un archivo Parquet en el bucket
+bucket_name = "bucketpgrupal"
+archivo_nombre = nombre_archivo
 with fs.open(f"{bucket_name}/{archivo_nombre}", "wb") as f:
     df_automatizado.to_parquet(f)
 
