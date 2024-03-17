@@ -25,9 +25,8 @@ jobs:
         pip install pandas google-auth pandas-gbq gcsfs
 
     - name: Crear archivo de credenciales JSON
-      run: echo "$GCS_CREDENTIALS" > key.json
-      env:
-        GCS_CREDENTIALS: ${{ vars.BUCKET_GCP }}
+      run: echo "${{ vars.BUCKET_GCP }}"
+
 
     - name: Ejecutar script de Python
       run: |
