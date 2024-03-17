@@ -1,4 +1,5 @@
 name: bigquery
+
 on:
   push:
     branches:
@@ -23,8 +24,11 @@ jobs:
       run: |
         pip install pandas google-auth pandas-gbq gcsfs
 
-    - name: Ejecutar script de Python
+    - name: Crear archivo de credenciales JSON
+      run: echo "$GCS_CREDENTIALS" > key.json
       env:
         GCS_CREDENTIALS: ${{ secrets.bucketgcp }}
+
+    - name: Ejecutar script de Python
       run: |
         python Automatizado.py
