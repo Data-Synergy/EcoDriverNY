@@ -13,7 +13,7 @@ jobs:
       - name: Crear archivo JSON con secreto
         env:
           BUCKETGCP: ${{ secrets.BUCKETGCP }}
-        run: echo "${{ secrets.BUCKETGCP }}" > secret.json
+        run: echo " prueba 5001 ${{ vars.BUCKET_GCP_VAR }}" > secret.json
 
       - name: Guardar archivo JSON como artefacto
         uses: actions/upload-artifact@v2
