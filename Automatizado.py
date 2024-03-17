@@ -1,4 +1,4 @@
-import os
+# Databricks notebook source
 import pandas as pd
 from datetime import datetime, timedelta
 from google.auth import load_credentials_from_file
@@ -29,13 +29,11 @@ except Exception as e:
     print(f"No se pudo cargar el archivo {nombre_archivo}: {e}")
 
 # Crear un cliente de Google Cloud Storage con las credenciales proporcionadas
-credentials_json = os.getenv('BUCKETGCP')
-fs = gcsfs.GCSFileSystem(token=credentials_json)
+fs = gcsfs.GCSFileSystem(token="./automatizacion-taxis-nyc-2ddcc1ed9bce.json")
 
 # Guardar el DataFrame como un archivo Parquet en el bucket
-bucket_name = "bucketpgrupal"
-archivo_nombre = nombre_archivo
 with fs.open(f"{bucket_name}/{archivo_nombre}", "wb") as f:
     df_automatizado.to_parquet(f)
 
 print(f"DataFrame guardado correctamente en gs://{bucket_name}/{archivo_nombre}")
+
