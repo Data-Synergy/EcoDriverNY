@@ -40,7 +40,10 @@ El informe final proporcionará a la emprea una compresión profunda de los desa
 
 Además se pretende que el proyecto contribuya, más allá de las fronteras de la empresa, al avance del conocimiento en el campo de la movilidad urbana sostenible y se posicione como un referente para otras empresas del sector.
 
-# Metodologia de Trabajo
+# Metodologia de Trabajo 
+
+
+![Metodologia](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Metodologia%20de%20Trabajo.gif)
 
 <details>
   <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #1 </summary>
