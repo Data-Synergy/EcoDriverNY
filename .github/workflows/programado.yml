@@ -41,4 +41,4 @@ jobs:
 }'
     - name: Ejecutar script de Python
       run: |
-        python Automatizado.py
+        python automatizado2.py
