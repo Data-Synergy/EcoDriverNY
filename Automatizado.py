@@ -28,12 +28,14 @@ try:
 except Exception as e:
     print(f"No se pudo cargar el archivo {nombre_archivo}: {e}")
 
+# Definir el nombre del bucket
+bucket_name = "bucketpgrupal"
+
 # Crear un cliente de Google Cloud Storage con las credenciales proporcionadas
 fs = gcsfs.GCSFileSystem(token="./automatizacion-taxis-nyc-2ddcc1ed9bce.json")
 
 # Guardar el DataFrame como un archivo Parquet en el bucket
-with fs.open(f"{bucket_name}/{archivo_nombre}", "wb") as f:
+with fs.open(f"{bucket_name}/{nombre_archivo}", "wb") as f:
     df_automatizado.to_parquet(f)
 
-print(f"DataFrame guardado correctamente en gs://{bucket_name}/{archivo_nombre}")
-
+print(f"DataFrame guardado correctamente en gs://{bucket_name}/{nombre_archivo}")
