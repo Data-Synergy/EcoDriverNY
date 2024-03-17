@@ -70,7 +70,7 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
 # Stack Tecnológico 
 
- ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Lamina%20Arquitectura%201.jpg)
+ ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Arquitectura_EcoDRIVE.jpg)
 
  
 # Proceso ETL (Extraer-Tranformar-Carga)
