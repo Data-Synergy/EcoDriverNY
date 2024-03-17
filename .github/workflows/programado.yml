@@ -4,10 +4,8 @@ on:
     branches:
       - main
   schedule:
-    
-    -  cron: '40 21 * * MON-FRI'   #  # Ejecutar a las 18 15 de lunes a viernes
+    - cron: '40 21 * * MON-FRI'   # Ejecutar a las 18:15 de lunes a viernes
 
- 
 jobs:
   ejecutar-script-de-python:
     runs-on: ubuntu-latest
@@ -25,8 +23,8 @@ jobs:
       run: |
         pip install pandas google-auth pandas-gbq gcsfs
 
-
-
     - name: Ejecutar script de Python
+      env:
+        GCS_CREDENTIALS: ${{ secrets.bucketgcp }}
       run: |
         python Automatizado.py
