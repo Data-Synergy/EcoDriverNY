@@ -27,7 +27,7 @@ jobs:
     - name: Crear archivo de credenciales JSON
       run: echo "$GCS_CREDENTIALS" > key.json
       env:
-        GCS_CREDENTIALS: ${{ secrets.bucketgcp }}
+        GCS_CREDENTIALS: ${{ secrets.BUCKETGCP }}
 
     - name: Ejecutar script de Python
       run: |
