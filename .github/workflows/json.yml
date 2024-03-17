@@ -10,13 +10,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Crear archivo JSON con secreto
-      run: echo "{\"BUCKETGCP\": \"$BUCKETGCP\"}" > secret.json
-      env:
-        BUCKETGCP: ${{ secrets.BUCKETGCP }}
+      - name: Crear archivo JSON con secreto
+        env:
+          BUCKETGCP: ${{ secrets.BUCKETGCP }}
+        run: echo '${{ secrets.BUCKETGCP }}' > secret.json
 
-    - name: Guardar archivo JSON como artefacto
-      uses: actions/upload-artifact@v2
-      with:
-        name: secret
-        path: secret.json
+      - name: Guardar archivo JSON como artefacto
+        uses: actions/upload-artifact@v2
+        with:
+          name: secret
+          path: secret.json
