@@ -56,14 +56,14 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
   <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #2 </summary>
 
   <p>
-    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png" alt="Diagrama">
+    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/sprint2.png" alt="Diagrama">
   </p>
 </details>
 <details>
   <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #3 </summary>
 
   <p>
-    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png" alt="Diagrama">
+    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/sprint%203.png" alt="Diagrama">
   </p>
 </details>
 
