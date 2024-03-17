@@ -23,7 +23,7 @@ jobs:
 
     - name: Instalar dependencias
       run: |
-        pip install pandas google-auth pandas-gbq
+        pip install pandas google-auth pandas-gbq gcsfs
 
 
 
