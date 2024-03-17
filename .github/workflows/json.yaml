@@ -1,0 +1,22 @@
+name: Crear archivo JSON con secreto
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  crear-archivo-json:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Crear archivo JSON con secreto
+      run: echo "{\"BUCKETGCP\": \"$BUCKETGCP\"}" > secret.json
+      env:
+        BUCKETGCP: ${{ secrets.BUCKETGCP }}
+
+    - name: Guardar archivo JSON como artefacto
+      uses: actions/upload-artifact@v2
+      with:
+        name: secret
+        path: secret.json
