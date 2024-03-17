@@ -3,6 +3,7 @@ import pandas as pd
 from datetime import datetime, timedelta
 from google.auth import load_credentials_from_file
 from pandas.io import gbq
+import gcsfs
 
 # Obtener la fecha actual
 fecha_actual = datetime.now()
@@ -27,16 +28,12 @@ try:
 except Exception as e:
     print(f"No se pudo cargar el archivo {nombre_archivo}: {e}")
 
-credentials, project_id = load_credentials_from_file(
-    "./automatizacion-taxis-nyc-d47c13651bca.json"
-)
+# Crear un cliente de Google Cloud Storage con las credenciales proporcionadas
+fs = gcsfs.GCSFileSystem(token="/content/automatizacion-taxis-nyc-2ddcc1ed9bce.json")
 
-# Asignar el ID del proyecto a la variable project_id
-project_id = "automatizacion-taxis-nyc"
+# Guardar el DataFrame como un archivo Parquet en el bucket
+with fs.open(f"{bucket_name}/{archivo_nombre}", "wb") as f:
+    df_automatizado.to_parquet(f)
 
+print(f"DataFrame guardado correctamente en gs://{bucket_name}/{archivo_nombre}")
 
-df_automatizado.to_gbq(destination_table="basededatos_taxis.automatizado",
-                       project_id=project_id,
-                       if_exists="append",
-                       credentials=credentials)
-print("DataFrame cargado a BigQuery correctamente.")
