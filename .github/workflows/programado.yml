@@ -12,27 +12,28 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout código
-      uses: actions/checkout@v2
+      - name: Checkout código
+        uses: actions/checkout@v2
 
-    - name: Configurar Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.11
+      - name: Configurar Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.11
 
-    - name: Instalar dependencias
-      run: |
-        pip install pandas google-auth pandas-gbq gcsfs
+      - name: Instalar dependencias
+        run: |
+          pip install pandas google-auth pandas-gbq gcsfs
 
-    - name: Crear archivo JSON con secreto
-      run: echo "{ "${{ secrets.GCP_BUCKET }} "}" > secret.json
+      - name: Crear archivo JSON con secreto
+        run: |
+          echo '{"GCP_BUCKET": "${{ secrets.GCP_BUCKET }}"}' > secret.json
 
-    - name: Ejecutar script de Python
-      run: |
-        python Automatizado.py
+      - name: Ejecutar script de Python
+        run: |
+          python Automatizado.py
 
-    - name: Guardar archivo JSON como artefacto
-      uses: actions/upload-artifact@v2
-      with:
-        name: secret
-        path: secret.json
+      - name: Guardar archivo JSON como artefacto
+        uses: actions/upload-artifact@v2
+        with:
+          name: secret
+          path: secret.json
