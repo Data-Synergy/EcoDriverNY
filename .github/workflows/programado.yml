@@ -22,7 +22,7 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install pandas google-auth pandas-gbq gcsfs
+          pip install pandas google-auth pandas-gbq gcsfs json
 
       - name: Crear archivo JSON con secreto
         run: |
