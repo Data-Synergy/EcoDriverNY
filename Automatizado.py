@@ -1,8 +1,5 @@
-# Databricks notebook source
 import pandas as pd
 from datetime import datetime, timedelta
-from google.auth import load_credentials_from_file
-from pandas.io import gbq
 import gcsfs
 
 # Obtener la fecha actual
@@ -18,6 +15,16 @@ if mes_tres_meses_atras <= 0:
 # Construir el nombre del archivo Parquet
 nombre_archivo = f"yellow_tripdata_{año_tres_meses_atras}-{mes_tres_meses_atras:02}.parquet"
 
+# Definir el nombre del bucket
+bucket_name = "bucketpgrupal"
+
+# Leer el archivo JSON con las credenciales
+with open("secret.json", "r") as json_file:
+    credentials_json = json.load(json_file)
+
+# Crear un cliente de Google Cloud Storage con las credenciales proporcionadas
+fs = gcsfs.GCSFileSystem(token=credentials_json["GCP_BUCKET"])
+
 # Construir la ruta del archivo Parquet
 ruta_archivo = f"https://d37ci6vzurychx.cloudfront.net/trip-data/{nombre_archivo}"
 
@@ -27,12 +34,6 @@ try:
     print(f"DataFrame cargado correctamente desde {ruta_archivo}")
 except Exception as e:
     print(f"No se pudo cargar el archivo {nombre_archivo}: {e}")
-
-# Definir el nombre del bucket
-bucket_name = "bucketpgrupal"
-
-# Crear un cliente de Google Cloud Storage con las credenciales proporcionadas
-fs = gcsfs.GCSFileSystem(token="./automatizacion-taxis-nyc-2ddcc1ed9bce.json")
 
 # Guardar el DataFrame como un archivo Parquet en el bucket
 with fs.open(f"{bucket_name}/{nombre_archivo}", "wb") as f:
