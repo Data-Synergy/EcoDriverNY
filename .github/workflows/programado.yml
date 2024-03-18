@@ -27,7 +27,7 @@ jobs:
 
       - name: Crear archivo JSON con secreto
         run: |
-          echo '{"GCP_BUCKET": '${{ secrets.GCP_BUCKET }}'}' > secret.json
+          echo '{"GCP_BUCKET": "${{ secrets.GCP_BUCKET }}"}' > secret.json
 
       - name: Ejecutar script de Python
         run: |
