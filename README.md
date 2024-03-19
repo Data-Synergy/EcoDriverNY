@@ -72,18 +72,42 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
  ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Arquitectura_EcoDRIVE.jpg)
 
- 
-# Proceso ETL (Extraer-Tranformar-Carga)
-En el contexto de nuestras operaciones de procesamiento de datos, hemos implementado un riguroso proceso ETL (Extracción, Transformación, Carga) utilizando el orquestador de flujo avanzado. Este proceso ha sido cuidadosamente diseñado para abordar las complejidades inherentes de los datos relacionados con diversos modos de transporte en la ciudad de Nueva York.
+# Proceso de ELT-L
+En el contexto de nuestras operaciones de procesamiento de datos, hemos implementado un riguroso proceso ETL (Extracción, Carga, Transformación, ) utilizando el orquestador de flujo avanzado. Este proceso ha sido cuidadosamente diseñado para abordar las complejidades inherentes de los datos relacionados con diversos modos de transporte en la ciudad de Nueva York.
 
-⛏️ **Extracción de Data y Limpieza y Transformación de Data****
 Para obtener una fuente de datos confiable y completa, realizamos un proceso de web scraping en el sitio web oficial de la Comisión de Taxis y Limusinas de la ciudad de Nueva York. Utilizamos esta técnica para recopilar archivos Parquet que contienen datos históricos sobre viajes realizados en varios tipos de vehículos, incluidos taxis amarillos, taxis verdes, vehículos de alquiler y vehículos de alquiler de gran volumen.
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> WEBSCRAPPING </summary>
 
+  <p>
+      
+Recopilar las URL de las páginas de las que desea extraer datos. Realizar una solicitud a estas URL para obtener datos de archivos parquet de la página que provee Henry. Guardar los datos en dataframes y despues para llevarlos al DataLake.
+  </p>
+</details>
+
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> DATA LAKE </summary>
+
+  <p>
+      
+Tomar los datos con webscrapping y realizar su exploración correspondiente para realizar los cambios que nos brindara el MVP para luego llevarlos a nuestro Data Warehouse
+  </p>
+</details>
+
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> DATA WAREHOUSE </summary>
+
+  <p>
+Tomar los datos desde el DataLake y realizar su carga correspondiente para realizar los cambios que nos brindara el MVP en nuestro Data Warehouse. Una vez que los datos estuvieron limpios, estandarizados y enriquecidos, procedimos a exportarlos a nuestro Data Warehouse, específicamente a tablas de BigQuery. Este paso es crucial para permitir análisis avanzados y consultas de alto rendimiento que impulsen nuestros procesos de toma de decisiones estratégicas.
+  </p>
+</details>
 Además, mejoramos nuestro conjunto de datos incorporando información histórica sobre las concentraciones de monóxido de carbono (CO) en Manhattan a través de la API OpenWeather. Este enfoque integral nos permitió enriquecer nuestra comprensión de los factores ambientales que pueden influir en los patrones de movilidad de la ciudad.
 
 
-💽 **Carga en el Data Warehouse**
-Una vez que los datos estuvieron limpios, estandarizados y enriquecidos, procedimos a exportarlos a nuestro Data Warehouse, específicamente a tablas de BigQuery. Este paso es crucial para permitir análisis avanzados y consultas de alto rendimiento que impulsen nuestros procesos de toma de decisiones estratégicas.
+
+
+  </p>
+</details>
 
 
 # Fuentes de Datos
