@@ -86,6 +86,15 @@ Recopilar las URL de las páginas de las que desea extraer datos. Realizar una s
 </details>
 
 <details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> API </summary>
+
+  <p>
+Además, mejoramos nuestro conjunto de datos incorporando información histórica sobre las concentraciones de monóxido de carbono (CO) en Manhattan a través de la API OpenWeather. Este enfoque integral nos permitió enriquecer nuestra comprensión de los factores ambientales que pueden influir en los patrones de movilidad de la ciudad.
+
+
+  </p>
+</details>
+<details>
   <summary style="cursor: s-resize; user-select: none; position: relative;"> DATA LAKE </summary>
 
   <p>
@@ -101,8 +110,6 @@ Tomar los datos con webscrapping y realizar su exploración correspondiente para
 Tomar los datos desde el DataLake y realizar su carga correspondiente para realizar los cambios que nos brindara el MVP en nuestro Data Warehouse. Una vez que los datos estuvieron limpios, estandarizados y enriquecidos, procedimos a exportarlos a nuestro Data Warehouse, específicamente a tablas de BigQuery. Este paso es crucial para permitir análisis avanzados y consultas de alto rendimiento que impulsen nuestros procesos de toma de decisiones estratégicas.
   </p>
 </details>
-Además, mejoramos nuestro conjunto de datos incorporando información histórica sobre las concentraciones de monóxido de carbono (CO) en Manhattan a través de la API OpenWeather. Este enfoque integral nos permitió enriquecer nuestra comprensión de los factores ambientales que pueden influir en los patrones de movilidad de la ciudad.
-
 
 
 
