@@ -34,7 +34,7 @@ El informe final proporcionará a la emprea una compresión profunda de los desa
 Además se pretende que el proyecto contribuya, más allá de las fronteras de la empresa, al avance del conocimiento en el campo de la movilidad urbana sostenible y se posicione como un referente para otras empresas del sector.
 
 
-# Producto Owner
+# Product Owner
 
 ​Empresa de servicios de transporte de pasajeros, que opera en el sector de micros de media y larga distancia, está interesada en invertir en el sector de transporte de pasajeros con automóviles. Con una visión de un futuro menos contaminado y ajustarse a las tendencias de mercado actuales, necesita corroborar la relación entre estos medios de transporte particulares y la calidad del aire, como también la contaminación sonora, para estudiar la posibilidad de implementar vehículos eléctricos a su flota; ya sea en su totalidad o parte de la misma.
 
