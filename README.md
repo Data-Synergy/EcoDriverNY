@@ -12,24 +12,17 @@
 </div>
 
 
-# Introducción
+# Presentación
+
 “OneNYC 2050” es una iniciativa de la ciudad de Nueva York que busca abordar los desafíos futuros mediante la transformación hacia una ciudad alimentada 100% por energías renovables, eliminando el uso de los combustibles fósiles.
 
 En este sentido la empresa de taxis 'EcoDriveNY' se encuentra en un momento crucial para su expansión y transformación hacia la sostenbilidad, adaptandose a las tendencias del mercado y promoviendo un trnasporte de pasajeros más limpio en Nueva York.
 
 La movilidad urbana sostenible es una prioridad creciente en el contexto global y en este sentido la ciudad de Nueva York no es la excepción, en los últimos años, varios líderes de esta ciudad se han unido en la iniciativa ‘OneNYC 2050′ para construir alternativas que permitan a todos los habitantes de la conocida ‘Capital del mundo’ combatir los desafíos que se aproximan, entre ellos, transformar la manera de consumir energía en la ciudad, que gradualmente se convertiría en energía 100 % renovable, para decirle adiós a los combustibles fósiles.
 
-# Indice
-- [Introducción](#introducción)
-- [Objetivos](#Objetivos)
-- [Stack Tecnológico](#Stack-Tecnológico)
-- [Proceso ETL (Extraer-Tranformar-Carga)](https://github.com/Data-Synergy/EcoDriverNY/blob/main/README.md#proceso-etl-extraer-tranformar-carga))
-- [Diagrama Gantt](#gantt-diagram)
-- [Performance de Indicadores Claves (KPIs)](#Performance-de-Indicadores-Claves-(KPIs))
-- [Modelo Machine Learning](https://github.com/Data-Synergy/EcoDriverNY/blob/main/README.md#modelo-machine-learning)
-- [API](#api)
-- [Fuentes de Datos](#Fuentes-de-Datos)
-- [Equipo](#Equipo)
+# Prototipo Funcional
+![Page_App](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/analisis-web-final.png)
+
 
 
 # Alcance del Proyecto
@@ -40,96 +33,32 @@ El informe final proporcionará a la emprea una compresión profunda de los desa
 
 Además se pretende que el proyecto contribuya, más allá de las fronteras de la empresa, al avance del conocimiento en el campo de la movilidad urbana sostenible y se posicione como un referente para otras empresas del sector.
 
-# Metodologia de Trabajo 
+
+# Producto Owner
+
+​Empresa de servicios de transporte de pasajeros, que opera en el sector de micros de media y larga distancia, está interesada en invertir en el sector de transporte de pasajeros con automóviles. Con una visión de un futuro menos contaminado y ajustarse a las tendencias de mercado actuales, necesita corroborar la relación entre estos medios de transporte particulares y la calidad del aire, como también la contaminación sonora, para estudiar la posibilidad de implementar vehículos eléctricos a su flota; ya sea en su totalidad o parte de la misma.
+
+​Pero debido a que sería una unidad de negocio nueva, se pretende hacer un análisis preliminar del movimiento de los taxis en la ciudad de Nueva York, para poder obtener un marco de referencia y poder tomar decisiones bien fundamentadas.
+
+​Tu equipo ha sido contratado por la empresa, con el objetivo de acompañar al negocio, en ese proceso de toma de decisión, para lo cual  utilizamos datos provistos de mayor calidad encontrados, y los cruzamoscon otros datos, como los ofrecidos por viajes compartidos, calidad del aire, contaminación sonora y correlaciones climáticas.
+
+# Story Board  + Storytelling
 
 
-![Metodologia](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Metodologia%20de%20Trabajo.gif)
-
-<details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #1 </summary>
-
-  <p>
-    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png" alt="Diagrama">
-  </p>
-</details>
-<details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #2 </summary>
-
-  <p>
-    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/sprint2.png" alt="Diagrama">
-  </p>
-</details>
-<details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> SPRINTS #3 </summary>
-
-  <p>
-    <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/sprint%203.png" alt="Diagrama">
-  </p>
-</details>
+# MVP
 
 
-# Stack Tecnológico 
+# Stack Tecnologico
 
  ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Arquitectura_EcoDRIVE.jpg)
 
-# Proceso de ELT-L
-En el contexto de nuestras operaciones de procesamiento de datos, hemos implementado un riguroso proceso ETL (Extracción, Carga, Transformación, ) utilizando el orquestador de flujo avanzado. Este proceso ha sido cuidadosamente diseñado para abordar las complejidades inherentes de los datos relacionados con diversos modos de transporte en la ciudad de Nueva York.
-
-Para obtener una fuente de datos confiable y completa, realizamos un proceso de web scraping en el sitio web oficial de la Comisión de Taxis y Limusinas de la ciudad de Nueva York. Utilizamos esta técnica para recopilar archivos Parquet que contienen datos históricos sobre viajes realizados en varios tipos de vehículos, incluidos taxis amarillos, taxis verdes, vehículos de alquiler y vehículos de alquiler de gran volumen.
-<details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> WEBSCRAPPING </summary>
-
-  <p>
-      
-Recopilar las URL de las páginas de las que desea extraer datos. Realizar una solicitud a estas URL para obtener datos de archivos parquet de la página que provee Henry. Guardar los datos en dataframes y despues para llevarlos al DataLake.
-  </p>
-</details>
-
-<details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> API </summary>
-
-  <p>
-Además, mejoramos nuestro conjunto de datos incorporando información histórica sobre las concentraciones de monóxido de carbono (CO) en Manhattan a través de la API OpenWeather. Este enfoque integral nos permitió enriquecer nuestra comprensión de los factores ambientales que pueden influir en los patrones de movilidad de la ciudad.
 
 
-  </p>
-</details>
-<details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> DATA LAKE </summary>
-
-  <p>
-      
-Tomar los datos con webscrapping y realizar su exploración correspondiente para realizar los cambios que nos brindara el MVP para luego llevarlos a nuestro Data Warehouse
-  </p>
-</details>
-
-<details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> DATA WAREHOUSE </summary>
-
-  <p>
-Tomar los datos desde el DataLake y realizar su carga correspondiente para realizar los cambios que nos brindara el MVP en nuestro Data Warehouse. Una vez que los datos estuvieron limpios, estandarizados y enriquecidos, procedimos a exportarlos a nuestro Data Warehouse, específicamente a tablas de BigQuery. Este paso es crucial para permitir análisis avanzados y consultas de alto rendimiento que impulsen nuestros procesos de toma de decisiones estratégicas.
-  </p>
-</details>
+# Documentacion
 
 
 
-  </p>
-</details>
-
-
-# Fuentes de Datos
-Nuestro proyecto se basa en datos de diversas fuentes para realizar un análisis exhaustivo. Estas fuentes de datos son esenciales para proporcionar información sobre diferentes aspectos del transporte y el impacto ambiental en Manhattan, Nueva York.
-
-Comisión de Taxis y Limusinas de Nueva York (TLC) : utilizamos datos históricos y actuales sobre viajes de varios tipos de servicios de transporte público en la ciudad de Nueva York. Esta fuente de datos ofrece información valiosa sobre los servicios de taxi, incluidos los taxis amarillos, los taxis verdes y más. Puede acceder a los datos en [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page) .
-
-Datos de contaminación del aire de la API de OpenWeather.org : recopilamos datos sobre la calidad del aire en función de las coordenadas de Manhattan. Esta fuente de datos nos permite monitorear los niveles de contaminación del aire y su impacto en la ciudad. Para obtener más información, visite OpenWeather.org API - [Contaminación del aire](https://openweathermap.org/api/air-pollution) 
-[Enviromental and Health Dat aPortal](https://a816-dohbesp.nyc.gov/IndicatorPublic/)
-
-Datos del proyecto sobre ruido : para comprender la contaminación acústica en Manhattan, utilizamos datos filtrados para zonas y vecindarios específicos. Estos datos nos ayudan a evaluar los niveles de ruido en diferentes áreas y sus posibles efectos. Puede acceder a los datos en [Datos del proyecto de ruido](https://noiseproject.org/data-download/)
-
-
-# Equipo
-
+# Nosotros
 
 <table align='center'>
   <tr>
@@ -246,6 +175,12 @@ Datos del proyecto sobre ruido : para comprender la contaminación acústica en 
       </div>
     </td>
   
+
+
+  
+
+
+
 
 
   
