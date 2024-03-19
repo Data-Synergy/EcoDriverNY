@@ -48,7 +48,7 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 # MVP
 
 
-# Stack Tecnologico
+# Stack Tecnológico
 
  ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Arquitectura_EcoDRIVE.jpg)
 
