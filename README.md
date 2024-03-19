@@ -57,8 +57,51 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
 
 
-# Documentacion
+# Diseño Detallado
 
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> Metodología de trabajo </summary>
+
+  <p>
+    Contenido del primer detalle.
+  </p>
+
+  <div style="margin-left: 20px;"> <!-- Ajusta el valor de margin-left según la indentación deseada -->
+    <details>
+      <summary style="cursor: s-resize; user-select: none; position: relative;"> Segundo detalle </summary>
+      <p>
+        Contenido del segundo detalle.
+      </p>
+    </details>
+  </div>
+</details>
+
+
+
+
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> Metodología de trabajo </summary>
+
+  <p>
+
+  </p>
+</details>
+
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> Documentación </summary>
+
+  <p>
+
+  </p>
+</details>
+
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> Estructura del Repositorio </summary>
+
+  <p>
+
+  </p>
+</details>
 
 
 # Nosotros
