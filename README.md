@@ -12,7 +12,7 @@
 </div>
 
 
-# Inotrducción
+# Introducción
 “OneNYC 2050” es una iniciativa de la ciudad de Nueva York que busca abordar los desafíos futuros mediante la transformación hacia una ciudad alimentada 100% por energías renovables, eliminando el uso de los combustibles fósiles.
 
 En este sentido la empresa de taxis 'EcoDriveNY' se encuentra en un momento crucial para su expansión y transformación hacia la sostenbilidad, adaptandose a las tendencias del mercado y promoviendo un trnasporte de pasajeros más limpio en Nueva York.
