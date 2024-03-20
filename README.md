@@ -49,7 +49,9 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/klipartz.com%20(1).png)
 
+# Proceso
 
+ ![Proceso](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Tareasc.jpg)
 
 # Stack Tecnológico
 
