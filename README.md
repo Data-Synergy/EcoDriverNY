@@ -47,6 +47,7 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
 # Story Board  + Storytelling
 
+![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/klipartz.com%20(1).png)
 
 # MVP
 
