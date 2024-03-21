@@ -43,7 +43,7 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
 ​Pero debido a que sería una unidad de negocio nueva, se pretende hacer un análisis preliminar del movimiento de los taxis en la ciudad de Nueva York, para poder obtener un marco de referencia y poder tomar decisiones bien fundamentadas.
 
-​Tu equipo ha sido contratado por la empresa, con el objetivo de acompañar al negocio, en ese proceso de toma de decisión, para lo cual  utilizamos datos provistos de mayor calidad encontrados, y los cruzamoscon otros datos, como los ofrecidos por viajes compartidos, calidad del aire, contaminación sonora y correlaciones climáticas.
+Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al negocio, en ese proceso de toma de decisión, para lo cual utilizamos datos provistos de mayor calidad encontrados, y los cruzamoscon otros datos, como los ofrecidos por viajes compartidos, calidad del aire, contaminación sonora y correlaciones climáticas.
 
 ![Cliente](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Cliente.jpg)
 
