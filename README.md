@@ -45,6 +45,8 @@ Además se pretende que el proyecto contribuya, más allá de las fronteras de l
 
 ​Tu equipo ha sido contratado por la empresa, con el objetivo de acompañar al negocio, en ese proceso de toma de decisión, para lo cual  utilizamos datos provistos de mayor calidad encontrados, y los cruzamoscon otros datos, como los ofrecidos por viajes compartidos, calidad del aire, contaminación sonora y correlaciones climáticas.
 
+![Cliente](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Cliente.jpg)
+
 # Story Board  + Storytelling
 
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/klipartz.com%20(1).png)
