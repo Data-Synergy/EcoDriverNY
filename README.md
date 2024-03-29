@@ -68,7 +68,6 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 
   <p>
       
-[Metodologia Scrum]()
 ![Metodologia Scrum](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Metodologia%20de%20Trabajo.gif)      
 ![Sprint N°1](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.png)
 
