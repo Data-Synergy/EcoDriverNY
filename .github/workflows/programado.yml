@@ -23,4 +23,4 @@ jobs:
 
       - name: Ejecutar script de Python
         run: |
-          python test.py
+          python descarga_base_automatizado.py
