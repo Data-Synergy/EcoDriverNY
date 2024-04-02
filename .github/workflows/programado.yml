@@ -2,7 +2,7 @@ name: test1
 
 on:
   schedule:
-    - cron: '16 4 * * *'   # Ejecutar a las 08:00 de lunes a viernes
+    - cron: '0 6 1 * *'   # Ejecutar a las 3:00 am ARG todos los 1 de cada mes
 
 jobs:
   ejecutar-script:
