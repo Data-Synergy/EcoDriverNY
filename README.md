@@ -115,12 +115,29 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 [4.Docs]()
 
 [5.Assets]()
+ 
 
+  </p>
+</details>
+
+
+<details>
+  <summary style="cursor: s-resize; user-select: none; position: relative;"> Disclaimer </summary>
+
+  <p>
+ 
+De parte del equipo de Henry se quiere aclarar y remarcar que los fines de los proyectos propuestos son exclusivamente pedagógicos, con el objetivo de realizar proyectos que simulen un entorno laboral, en el cual se trabajen diversas temáticas ajustadas a la realidad. No reflejan necesariamente la filosofía y valores de la organización. Además, Henry no alienta ni tampoco recomienda a los alumnos y/o cualquier persona leyendo los repositorios (y entregas de proyectos) que tomen acciones en base a los datos que pudieran o no haber recabado. Toda la información expuesta y resultados obtenidos en los proyectos, nunca deben ser tomados en cuenta para la toma real de decisiones (especialmente en la temática de finanzas, salud, política, etc.).
 
  
 
   </p>
 </details>
+
+
+
+
+
+
 
 
 # Nosotros
