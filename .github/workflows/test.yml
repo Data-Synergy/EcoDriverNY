@@ -1,8 +1,8 @@
-name: test1
+name: test2
 
 on:
   schedule:
-    - cron: '30 4 * * *'   # Ejecutar a las 3:00 am ARG todos los 1 de cada mes
+    - cron: '40 4 * * *'   # Ejecutar a las 3:00 am ARG todos los 1 de cada mes
 
 jobs:
   ejecutar-script:
