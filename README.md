@@ -59,7 +59,7 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 
 # Stack Tecnológico
 
- ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Arquitectura_EcoDRIVE.jpg)
+ ![Stack_Tecnologico](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/ArquitecturaFinal.png)
 
 
 
