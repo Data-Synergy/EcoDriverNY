@@ -20,6 +20,8 @@ En este sentido la empresa de taxis 'EcoDriveNY' se encuentra en un momento cruc
 
 La movilidad urbana sostenible es una prioridad creciente en el contexto global y en este sentido la ciudad de Nueva York no es la excepción, en los últimos años, varios líderes de esta ciudad se han unido en la iniciativa ‘OneNYC 2050′ para construir alternativas que permitan a todos los habitantes de la conocida ‘Capital del mundo’ combatir los desafíos que se aproximan, entre ellos, transformar la manera de consumir energía en la ciudad, que gradualmente se convertiría en energía 100 % renovable, para decirle adiós a los combustibles fósiles.
 
+![Mapa](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/ny.jpg)
+
 # Prototipo Funcional
 <p align="center">
   <img src="https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/analisis-web-final.png" alt="Page_App">
