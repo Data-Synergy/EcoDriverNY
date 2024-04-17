@@ -3,6 +3,7 @@ name: test1
 on:
   schedule:
     - cron: '0 6 1 * *'   # Ejecutar a las 3:00 am ARG todos los 1 de cada mes
+  workflow_dispatch:        # Permitir la ejecución manual
 
 jobs:
   ejecutar-script:
@@ -19,8 +20,8 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install pandas azure-storage-blob fastparquet pyarrow
+          pip install snowflake pyarrow
 
       - name: Ejecutar script de Python
         run: |
-          python descarga_base_automatizado.py
+          python descarga_incremental_datalake_auto.py
