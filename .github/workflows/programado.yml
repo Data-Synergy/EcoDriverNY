@@ -1,4 +1,4 @@
-name: test1
+name: descarga_ultimo_mes
 
 on:
   schedule:
