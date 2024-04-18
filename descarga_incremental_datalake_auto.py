@@ -1,3 +1,17 @@
+import os
+import snowflake.connector
+import pandas as pd
+import requests
+from io import BytesIO
+from pyspark.sql import SparkSession
+import tempfile
+from datetime import datetime, timedelta
+from pyspark.sql import functions as F
+from pyspark.sql.functions import when
+from pyspark.sql.window import Window
+from pyspark.sql.functions import min, max, hour, to_timestamp, round
+
+
 import snowflake.connector
 import requests
 import tempfile
@@ -53,3 +67,31 @@ with conn.cursor() as cursor:
 
 # Cerrar la conexión
 conn.close()
+
+###############################################################################################################
+os.remove(final_file_path)
+
+# Conexión a Snowflake
+conn = snowflake.connector.connect(
+    user='ELIASALMADA1234',
+    password='Ichi2017',
+    account='pzbgdyt-aib83585',
+    warehouse='COMPUTE_WH',
+    database='DATALAKE',
+    schema='PUBLIC'
+)
+
+# Consulta para obtener el nombre del último archivo Parquet
+query = f"""
+SELECT metadata$filename
+FROM @DATALAKE.PUBLIC.DATALAKE_TAXIS_NYC
+ORDER BY metadata$filename = {file_name}DESC
+LIMIT 1
+"""
+
+# Ejecutar la consulta
+cursor = conn.cursor()
+cursor.execute(query)
+
+# Obtener el nombre del archivo Parquet
+filename = cursor.fetchone()[0]
