@@ -25,7 +25,7 @@ conn = snowflake.connector.connect(
     password='Ichi2017',
     account='pzbgdyt-aib83585',
     warehouse='COMPUTE_WH',
-    database='DATALAKE',
+    database='SCHEMA_TAXIS_NYC_ECODRIVE',
     schema='PUBLIC'
 )
 
@@ -62,7 +62,7 @@ os.rename(temp_file_path, final_file_path)
 
 # Cargar el archivo Parquet en el stage de Snowflake
 with conn.cursor() as cursor:
-    put_statement = f"PUT 'file://{final_file_path}' @\"DATALAKE\".\"PUBLIC\".\"{stage_name}\""
+    put_statement = f"PUT 'file://{final_file_path}' @\"SCHEMA_TAXIS_NYC_ECODRIVE\".\"PUBLIC\".\"{stage_name}\""
     cursor.execute(put_statement)
 
 # Cerrar la conexión
@@ -75,14 +75,14 @@ conn = snowflake.connector.connect(
     password='Ichi2017',
     account='pzbgdyt-aib83585',
     warehouse='COMPUTE_WH',
-    database='DATALAKE',
+    database='SCHEMA_TAXIS_NYC_ECODRIVE',
     schema='PUBLIC'
 )
 
 # Consulta para obtener el nombre del último archivo Parquet
 query = f"""
 SELECT metadata$filename
-FROM @DATALAKE.PUBLIC.DATALAKE_TAXIS_NYC
+FROM @SCHEMA_TAXIS_NYC_ECODRIVE.PUBLIC.DATALAKE_TAXIS_NYC
 ORDER BY metadata$filename = '{file_name}' DESC
 LIMIT 1
 """
@@ -285,20 +285,30 @@ final_file_path = temp_file_path
 fecha_actual = datetime.now().strftime("%Y-%m-%d")
 
 # Crear el nombre del archivo Parquet con la fecha actual
-parquet_filename = f"ML_FR_HR{fecha_actual}.parquet"
+parquet_filename = f"DATALAKE_ML_FR_HR{fecha_actual}.parquet"
 
 
+# Crear un archivo temporal para almacenar el DataFrame
+temp_file = tempfile.NamedTemporaryFile(suffix='.csv', prefix='ml2_', delete=False)
+temp_file_path = temp_file.name
 
-# Guardar el DataFrame en formato Parquet
-parquet_output_path = os.path.join(parquet_filename)
-print("Ruta del archivo Parquet:", parquet_output_path)
-merged_df_sin_nulos_pandas.to_parquet(parquet_output_path)
+# Guardar el DataFrame en formato CSV
+merged_df_sin_nulos_pandas.to_csv(temp_file_path, index=False)
 
-# Verificar si el archivo se guardó correctamente
-if os.path.exists(parquet_output_path):
-    print("El archivo Parquet se guardó correctamente.")
-else:
-    print("Error: El archivo Parquet no se guardó correctamente.")
+# Ruta del archivo temporal
+final_file_path = temp_file_path 
+
+fecha_actual = datetime.now().strftime("%Y-%m-%d")
+
+# Crear el nombre del archivo CSV con la fecha actual
+csv_filename = f"DATALAKE_ML_FR_HR{fecha_actual}.csv"
+
+# Mover el archivo temporal al nombre final
+csv_output_path = os.path.join(csv_filename)
+os.rename(temp_file_path, csv_output_path)
+
+# Imprimir la ruta del archivo CSV final
+print("Ruta del archivo CSV:", csv_output_path)
 
 # Conexión a Snowflake
 conn = snowflake.connector.connect(
@@ -306,21 +316,57 @@ conn = snowflake.connector.connect(
     password='Ichi2017',
     account='pzbgdyt-aib83585',
     warehouse='COMPUTE_WH',
-    database='DATALAKE',
+    database='SCHEMA_TAXIS_NYC_ECODRIVE',
     schema='PUBLIC'
 )
 
 # Nombre del stage de Snowflake
-stage_name = "ML_FR_HR"
+stage_name = "DATALAKE_ML_FR_HR"
 
-# Cargar el archivo Parquet en el stage de Snowflake
+# Cargar el archivo CSV en el stage de Snowflake
 try:
     with conn.cursor() as cursor:
-        put_statement = f"PUT 'file://{parquet_output_path}' @\"DATALAKE\".\"PUBLIC\".\"{stage_name}\""
+        put_statement = f"PUT 'file://{csv_output_path}' @\"SCHEMA_TAXIS_NYC_ECODRIVE\".\"PUBLIC\".\"{stage_name}\""
         cursor.execute(put_statement)
-    print("Archivo Parquet cargado exitosamente en el stage de Snowflake.")
+    print("Archivo CSV cargado exitosamente en el stage de Snowflake.")
 except Exception as e:
-    print("Error al cargar el archivo Parquet en el stage de Snowflake:", str(e))
+    print("Error al cargar el archivo CSV en el stage de Snowflake:", str(e))
 finally:
     conn.close()
 
+
+# Conexión a Snowflake
+conn = snowflake.connector.connect(
+    user='ELIASALMADA1234',
+    password='Ichi2017',
+    account='pzbgdyt-aib83585',
+    warehouse='COMPUTE_WH',
+    database='SCHEMA_TAXIS_NYC_ECODRIVE',
+    schema='PUBLIC'
+)
+
+
+# Ejecutar la consulta
+cursor = conn.cursor()
+
+
+query =f"""COPY INTO "SCHEMA_TAXIS_NYC_ECODRIVE"."PUBLIC"."ML_FR_HR_WH"
+FROM '@"SCHEMA_TAXIS_NYC_ECODRIVE"."PUBLIC"."DATALAKE_ML_FR_HR"'
+FILES = ('{csv_output_path}.gz')
+FILE_FORMAT = (
+    TYPE=CSV,
+    SKIP_HEADER=1,
+    FIELD_DELIMITER=',',
+    TRIM_SPACE=FALSE,
+    FIELD_OPTIONALLY_ENCLOSED_BY=NONE,
+    REPLACE_INVALID_CHARACTERS=TRUE,
+    DATE_FORMAT=AUTO,
+    TIME_FORMAT=AUTO,
+    TIMESTAMP_FORMAT=AUTO
+)
+ON_ERROR=ABORT_STATEMENT;"""
+
+
+cursor.execute(query)
+
+conn.close()
