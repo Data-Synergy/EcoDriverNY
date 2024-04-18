@@ -20,7 +20,7 @@ jobs:
 
       - name: Instalar dependencias
         run: |
-          pip install snowflake pyarrow
+          pip install snowflake pyarrow pandas requests pyspark
 
       - name: Ejecutar script de Python
         run: |
