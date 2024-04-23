@@ -1,5 +1,6 @@
 import pandas as pd
 import streamlit as st
+import seaborn as sns
 from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -28,7 +29,7 @@ model_desc = tfidf.fit_transform(df_electric_tnCO2[relevant_columns].astype(str)
 similarity_matrix = cosine_similarity(model_desc, model_desc)
 
 # Streamlit app
-st.title("Recomendador de Vehículos Eléctricos")
+st.title("VRS (Vehicule Recommendation System)")
 
 # Imagen de la pantalla de inicio
 st.image("https://raw.githubusercontent.com/Data-Synergy/EcoDriverNY/main/img/banner.png", use_column_width=True)
@@ -38,14 +39,14 @@ st.sidebar.title("Navegación")
 
 option = st.sidebar.selectbox(
     'Seleccione una opción',
-    ('Inicio', 'KPIs', 'Conclusiones')
+    ('VRS (Vehicule Recommendation System)', 'Distribution', 'Resume')
 )
 
-# Sección de inicio
-if option == 'Inicio':
-    st.header("Descripción")
-    st.write("Este es un sistema que te ayuda a encontrar vehículos eléctricos similares al que tienes en mente, basado en sus características técnicas.")
-    st.write("Por favor, selecciona el fabricante, modelo y categoría de tu vehículo para recibir recomendaciones.")
+# Sección de VRS (Vehicule Recommendation System)
+if option == 'VRS (Vehicule Recommendation System)':
+    st.header("Bienvenido")
+    st.write("Este es un sistema que te ayuda a encontrar vehículos eléctricos similares al que deseas comprar para la flota, basado en sus características técnicas.")
+    st.write("Por favor, selecciona el fabricante, modelo y categoría del vehículo que deseas comprar para recibir recomendaciones.")
 
     # Interfaz de usuario
     # Obtener valores únicos de las columnas 'Manufacturer' y 'Model'
@@ -89,25 +90,25 @@ if option == 'Inicio':
             else:
                 st.write("Por favor seleccione un modelo.")  
 
-# Sección de KPIs
-elif option == 'KPIs':
-    st.header("Indicadores Clave de Rendimiento (KPIs)")
+# Sección de Distribución
+elif option == 'Distribution':
+    st.header("Distribución de Datos")
 
-    # Total de vehículos en el conjunto de datos
-    total_vehicles = len(df_electric_tnCO2)
-    st.write(f"Total de vehículos en el conjunto de datos: {total_vehicles}")
+      # Gráfico de barras para la distribución de fabricantes
+    st.subheader("Distribución de Fabricantes")
+    fabricante_counts = df_electric_tnCO2['Manufacturer'].value_counts()
+    
+    # Paleta de colores personalizada basada en el volumen
+    custom_palette = sns.color_palette("crest", len(fabricante_counts))
+    sns.set_palette(custom_palette)
+    
+    st.bar_chart(fabricante_counts)
+    # Otros gráficos de distribución
+    # Puedes agregar más gráficos de barras o cualquier otro tipo de gráfico aquí
 
-    # Número de fabricantes únicos
-    unique_manufacturers = len(df_electric_tnCO2['Manufacturer'].unique())
-    st.write(f"Número de fabricantes únicos: {unique_manufacturers}")
-
-    # Número de modelos únicos
-    unique_models = len(df_electric_tnCO2['Model'].unique())
-    st.write(f"Número de modelos únicos: {unique_models}")
-
-# Sección de conclusiones
-elif option == 'Conclusiones':
-    st.header("Conclusiones")
+# Sección de Resumen
+elif option == 'Resume':
+    st.header("Resumen")
 
     st.write("El proyecto EcoDriveNY se presenta como una iniciativa integral para la transición de la flota de taxis en la ciudad de Manhattan hacia vehículos eléctricos. Basado en una serie de aspectos clave, el proyecto demuestra ser tanto rentable como viable, ofreciendo una serie de beneficios que van más allá de la simple reducción de emisiones de carbono:")
     st.markdown("""
