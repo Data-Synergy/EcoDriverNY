@@ -10,7 +10,7 @@ def usoelectrico(Fecha: datetime, millas_electrico_turno_1: float,
 
     try:
         # Intenta cargar el archivo CSV si existe
-        flotaElectrica = pd.read_csv("data/flotaElectrica.csv")
+        flotaElectrica = pd.read_csv("EcoDriverNY/data/flotaElectrica.csv")
     except FileNotFoundError:
         # Si el archivo no existe, crea un DataFrame vacío
         flotaElectrica = pd.DataFrame(columns=['Fecha', "Millas Eléc T1", "Millas Eléc T2", "Millas Eléc T3", "Millas Conv T1", "Millas Conv T2", "Millas Conv T3", "% Millas T1", "% Millas T2", "% Millas T3", '% Participación Flota Eléctrica'])
@@ -46,7 +46,7 @@ def cumplimientoKPI(Fecha_analisis : datetime):
     fecha_analisis_str = Fecha_analisis.strftime('%Y-%m-%d')
 
     # importamos la tabla de la función
-    flotaElectrica = pd.read_csv("data/flotaElectrica.csv")
+    flotaElectrica = pd.read_csv("EcoDriverNY/data/flotaElectrica.csv")
     
     if fecha_analisis_str not in flotaElectrica["Fecha"].values:
         return "Esta fecha no está registrada."
@@ -85,13 +85,13 @@ def registro():
 
     # Mostrar los últimos 3 registros
     st.subheader('Últimos 3 Registros')
-    ultimos_registros = pd.read_csv("data/flotaElectrica.csv").tail(3)
+    ultimos_registros = pd.read_csv("EcoDriverNY/data/flotaElectrica.csv").tail(3)
     st.write(ultimos_registros)
         # Mostrar información sobre las fechas registradas
     # Mostrar información sobre las fechas registradas
     try:
         # Intenta cargar el archivo CSV si existe
-        flotaElectrica = pd.read_csv("data/flotaElectrica.csv")
+        flotaElectrica = pd.read_csv("EcoDriverNY/data/flotaElectrica.csv")
         if not flotaElectrica.empty:
             primera_fecha = flotaElectrica["Fecha"].iloc[0]
             ultima_fecha = flotaElectrica["Fecha"].iloc[-1]
