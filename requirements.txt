@@ -54,3 +54,4 @@ tzdata==2024.1
 urllib3==2.2.1
 watchdog==4.0.0
 zipp==3.18.1
+base64==1.8.1
