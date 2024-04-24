@@ -22,12 +22,12 @@ jobs:
         run: pip install pandas  # Instala las dependencias necesarias
 
       - name: Update Data
-        run: python kpi.py  # Ejecuta tu script Python de actualización de datos
+        run: python update_data.py  # Ejecuta tu script Python de actualización de datos
 
       - name: Commit and Push Changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add .
+          git add data/flotaElectrica.csv  # Asegúrate de añadir el archivo actualizado
           git commit -m "Update data"
           git push
