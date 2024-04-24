@@ -22,7 +22,7 @@ jobs:
         run: pip install pandas  # Instala las dependencias necesarias
 
       - name: Update Data
-        run: python update_data.py  # Ejecuta tu script Python de actualización de datos
+        run: python kpi.py  # Ejecuta tu script Python de actualización de datos
 
       - name: Commit and Push Changes
         run: |
