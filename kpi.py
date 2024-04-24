@@ -66,6 +66,7 @@ def cumplimientoKPI(Fecha_analisis : datetime):
             return f"No se cumplió el objetivo por {diferencia.round(2)}%."
 
 
+
 # Interfaz de usuario con Streamlit para la página de registro de uso de vehículos eléctricos
 def registro():
     st.title('Registro de Uso de Vehículos Eléctricos')
@@ -82,6 +83,11 @@ def registro():
                       millas_convencionales_turno_1, millas_convencionales_turno_2, millas_convencionales_turno_3)
         st.success('¡Registro exitoso!')
 
+    # Mostrar los últimos 3 registros
+    st.subheader('Últimos 3 Registros')
+    ultimos_registros = pd.read_csv("data/flotaElectrica.csv").tail(3)
+    st.write(ultimos_registros)
+        # Mostrar información sobre las fechas registradas
     # Mostrar información sobre las fechas registradas
     try:
         # Intenta cargar el archivo CSV si existe
@@ -98,10 +104,6 @@ def registro():
     except FileNotFoundError:
         st.write("No se encontró el archivo de datos.")
 
-    # Mostrar los últimos 3 registros
-    st.subheader('Últimos 3 Registros')
-    ultimos_registros = pd.read_csv("data/flotaElectrica.csv").tail(3)
-    st.write(ultimos_registros)
 
 # Interfaz de usuario con Streamlit para la página de cumplimiento KPI
 def cumplimiento():
