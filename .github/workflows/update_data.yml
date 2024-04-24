@@ -26,7 +26,7 @@ jobs:
 
       - name: Commit and Push Changes
         run: |
-          git config --local user.email "action@github.com"
+          git config --local user.email "actions@users.noreply.github.com"
           git config --local user.name "GitHub Action"
           git add data/flotaElectrica.csv  # Asegúrate de añadir el archivo actualizado
           git commit -m "Update data"
