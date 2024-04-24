@@ -1,0 +1,33 @@
+name: Update Data
+
+on:
+  push:
+    branches:
+      - main  # O el nombre de tu rama principal
+
+jobs:
+  update_data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'  # Especifica la versión de Python que necesitas
+
+      - name: Install Dependencies
+        run: pip install pandas  # Instala las dependencias necesarias
+
+      - name: Update Data
+        run: python kpi.py  # Ejecuta tu script Python de actualización de datos
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update data"
+          git push
