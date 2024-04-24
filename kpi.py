@@ -7,7 +7,7 @@ import base64
 # Configuración de GitHub
 REPO_OWNER = "Data-Synergy"
 REPO_NAME = "EcoDriverNY"
-TOKEN = "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"
+TOKEN = "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"
 
 # Función para guardar en GitHub
 def guardar_en_github(dataframe):
