@@ -1,6 +1,54 @@
 import streamlit as st
 import pandas as pd
+import requests
 from datetime import datetime
+import base64
+
+# Configuración de GitHub
+REPO_OWNER = "Data-Synergy"
+REPO_NAME = "EcoDriverNY"
+TOKEN = "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"
+
+# Función para guardar en GitHub
+# Función para guardar en GitHub
+def guardar_en_github(dataframe):
+    url = f"https://api.github.com/repos/{REPO_OWNER}/{REPO_NAME}/contents/data/flotaElectrica.csv"
+    headers = {
+        "Authorization": f"token {TOKEN}"
+    }
+
+    # Convertir DataFrame a CSV en memoria
+    csv_data = dataframe.to_csv(index=False)
+
+    # Codificar el contenido CSV en Base64
+    content_base64 = base64.b64encode(csv_data.encode()).decode()
+
+    # Crear el payload para la API de GitHub
+    payload = {
+        "message": "Actualizar CSV",
+        "content": content_base64,
+    }
+
+    # Obtener el contenido actual del archivo
+    response = requests.get(url, headers=headers)
+    if response.status_code == 200:
+        file_sha = response.json()["sha"]
+        payload["sha"] = file_sha
+    elif response.status_code == 404:
+        # Si el archivo no existe, se creará uno nuevo
+        pass
+    else:
+        st.error(f"Error al obtener el archivo CSV de GitHub: {response.text}")
+        return
+
+    # Hacer la solicitud PUT para actualizar o crear el archivo
+    response = requests.put(url, headers=headers, json=payload)
+
+    if response.status_code == 200 or response.status_code == 201:
+        st.success("¡Archivo CSV actualizado en GitHub!")
+    else:
+        st.error(f"Error al actualizar CSV en GitHub: {response.text}")
+
 
 # Función para registrar el uso de vehículos eléctricos
 def usoelectrico(Fecha: datetime, millas_electrico_turno_1: float,
@@ -37,7 +85,12 @@ def usoelectrico(Fecha: datetime, millas_electrico_turno_1: float,
             kpi_porcentaje_participacion_flota_electrica_diario]
         df_temporal = pd.DataFrame([valores], columns=datos_diarios.columns)
         flotaElectrica = pd.concat([flotaElectrica, df_temporal], ignore_index=True)
+
+        # Guardar en CSV localmente
         flotaElectrica.to_csv("data/flotaElectrica.csv", index=False)
+
+        # Guardar en GitHub
+        guardar_en_github(flotaElectrica)
 
     return flotaElectrica
 
@@ -66,7 +119,6 @@ def cumplimientoKPI(Fecha_analisis : datetime):
             return f"No se cumplió el objetivo por {diferencia.round(2)}%."
 
 
-
 # Interfaz de usuario con Streamlit para la página de registro de uso de vehículos eléctricos
 def registro():
     st.title('Registro de Uso de Vehículos Eléctricos')
@@ -87,11 +139,12 @@ def registro():
     st.subheader('Últimos 3 Registros')
     ultimos_registros = pd.read_csv("data/flotaElectrica.csv").tail(3)
     st.write(ultimos_registros)
-        # Mostrar información sobre las fechas registradas
-    # Mostrar información sobre las fechas registradas
+
+    # Mostrar información sobre las fechas registradas en GitHub
     try:
-        # Intenta cargar el archivo CSV si existe
-        flotaElectrica = pd.read_csv("data/flotaElectrica.csv")
+        # Intenta cargar el archivo CSV desde GitHub
+        url = f"https://raw.githubusercontent.com/{REPO_OWNER}/{REPO_NAME}/master/data/flotaElectrica.csv"
+        flotaElectrica = pd.read_csv(url)
         if not flotaElectrica.empty:
             primera_fecha = flotaElectrica["Fecha"].iloc[0]
             ultima_fecha = flotaElectrica["Fecha"].iloc[-1]
@@ -101,9 +154,8 @@ def registro():
             st.write(f"Total de registros: {total_registros}")
         else:
             st.write("No hay registros disponibles.")
-    except FileNotFoundError:
-        st.write("No se encontró el archivo de datos.")
-
+    except Exception as e:
+        st.write(f"Error al cargar datos desde GitHub: {e}")
 
 # Interfaz de usuario con Streamlit para la página de cumplimiento KPI
 def cumplimiento():
@@ -122,3 +174,4 @@ if __name__ == "__main__":
         registro()
     elif choice == tabs[1]:
         cumplimiento()
+
