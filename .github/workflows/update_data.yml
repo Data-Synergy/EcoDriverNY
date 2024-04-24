@@ -1,4 +1,4 @@
-name: Update Data
+name: Update KPI DATA
 
 on:
   push:
@@ -19,7 +19,7 @@ jobs:
           python-version: '3.11'  # Especifica la versión de Python que necesitas
 
       - name: Install Dependencies
-        run: pip install pandas streamlit datetime # Instala las dependencias necesarias
+        run: pip install pandas streamlit  # Instala las dependencias necesarias
 
       - name: Update Data
         run: python kpi.py  # Ejecuta tu script Python de actualización de datos
@@ -31,3 +31,4 @@ jobs:
           git add data/flotaElectrica.csv  # Asegúrate de añadir el archivo actualizado
           git commit -m "Update data"
           git push
+
