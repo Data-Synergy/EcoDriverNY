@@ -87,6 +87,23 @@ def registro():
     st.subheader('Últimos 3 Registros')
     ultimos_registros = pd.read_csv("data/flotaElectrica.csv").tail(3)
     st.write(ultimos_registros)
+        # Mostrar información sobre las fechas registradas
+    # Mostrar información sobre las fechas registradas
+    try:
+        # Intenta cargar el archivo CSV si existe
+        flotaElectrica = pd.read_csv("data/flotaElectrica.csv")
+        if not flotaElectrica.empty:
+            primera_fecha = flotaElectrica["Fecha"].iloc[0]
+            ultima_fecha = flotaElectrica["Fecha"].iloc[-1]
+            total_registros = flotaElectrica.shape[0]
+            st.write(f"Primera fecha registrada: {primera_fecha}")
+            st.write(f"Última fecha registrada: {ultima_fecha}")
+            st.write(f"Total de registros: {total_registros}")
+        else:
+            st.write("No hay registros disponibles.")
+    except FileNotFoundError:
+        st.write("No se encontró el archivo de datos.")
+
 
 # Interfaz de usuario con Streamlit para la página de cumplimiento KPI
 def cumplimiento():
