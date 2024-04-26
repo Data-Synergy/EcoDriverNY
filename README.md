@@ -60,10 +60,10 @@ Este tablero proporciona una visión detallada del avance hacia la eliminación 
 
 A través de métricas clave, gráficos interactivos y análisis en tiempo real, el dashboard ofrece una ventana transparente hacia el futuro sostenible de Nueva York, reafirmando su compromiso con el bienestar del medio ambiente y sus ciudadanos en el horizonte del año 2050.
 
-![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/temporal22.jpg)
-![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/KPI%20FInal2.jpg)
-![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/KPI%20EMISONES.jpg)
-![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/KPI%20COSTO%20COMBUSTIBLE.jpg)
+![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/1.jpg)
+![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/2.jpg)
+![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/3.jpg)
+![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/4.jpg)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Conclusion.png)
 
 
