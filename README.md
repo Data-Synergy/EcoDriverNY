@@ -5,7 +5,7 @@
     <a href="https://foremost-level-098.notion.site/NYC-Proyecto-de-Reducci-n-de-Emisiones-de-Carbono-ea199d70daeb4fa0a851d875e83f006c" target="_blank" target="_blank">
           <img  src="img/h.png"/>
        </a>
-   <a href="https://youtu.be/73QvY9h__Uw">
+   <a href="https://youtu.be/P6u2y_XmpLY">
           <img  src="img/p.png"/>
       </a>
       </div>
