@@ -51,48 +51,53 @@ def subir_datos_a_base_de_datos(conn, fecha, millas_electrico_turno_1, millas_el
 
 def mostrar_interfaz():
     fecha = st.date_input("Fecha", format="YYYY-MM-DD")  # Forzar el formato de fecha a aaaa-mm-dd
-    millas_electrico_turno_1 = st.number_input("Millas Eléc. Turno 1")
-    millas_electrico_turno_2 = st.number_input("Millas Eléc. Turno 2")
-    millas_electrico_turno_3 = st.number_input("Millas Eléc. Turno 3")
-    millas_convencionales_turno_1 = st.number_input("Millas Conv. Turno 1")
-    millas_convencionales_turno_2 = st.number_input("Millas Conv. Turno 2")
-    millas_convencionales_turno_3 = st.number_input("Millas Conv. Turno 3")
+    millas_electrico_turno_1 = st.number_input("Millas Eléc. Turno 1", value=0.0, min_value=0.0)
+    millas_electrico_turno_2 = st.number_input("Millas Eléc. Turno 2", value=0.0, min_value=0.0)
+    millas_electrico_turno_3 = st.number_input("Millas Eléc. Turno 3", value=0.0, min_value=0.0)
+    millas_convencionales_turno_1 = st.number_input("Millas Conv. Turno 1", value=0.0, min_value=0.0)
+    millas_convencionales_turno_2 = st.number_input("Millas Conv. Turno 2", value=0.0, min_value=0.0)
+    millas_convencionales_turno_3 = st.number_input("Millas Conv. Turno 3", value=0.0, min_value=0.0)
 
     if st.button("Registrar Uso"):
-        subir_datos_a_base_de_datos(conexion, fecha, millas_electrico_turno_1, millas_electrico_turno_2,
-                                    millas_electrico_turno_3, millas_convencionales_turno_1,
-                                    millas_convencionales_turno_2, millas_convencionales_turno_3)
+        # Verificar que los valores sean mayores que 0
+        if (millas_electrico_turno_1 > 0 and millas_electrico_turno_2 > 0 and millas_electrico_turno_3 > 0 and
+            millas_convencionales_turno_1 > 0 and millas_convencionales_turno_2 > 0 and millas_convencionales_turno_3 > 0):
+            subir_datos_a_base_de_datos(conexion, fecha, millas_electrico_turno_1, millas_electrico_turno_2,
+                                        millas_electrico_turno_3, millas_convencionales_turno_1,
+                                        millas_convencionales_turno_2, millas_convencionales_turno_3)
+        else:
+            st.warning("Los valores deben ser mayores que 0.")
 
     if st.button("Mostrar resultados"):
         sql_query = """
         SELECT
-    FECHA,
-    SUM(MILLAS_ELEC_T1) AS SUMA_MILLAS_ELEC_T1,
-    SUM(MILLAS_ELEC_T2) AS SUMA_MILLAS_ELEC_T2,
-    SUM(MILLAS_ELEC_T3) AS SUMA_MILLAS_ELEC_T3,
-    SUM(MILLAS_CONV_T1) AS SUMA_MILLAS_CONV_T1,
-    SUM(MILLAS_CONV_T2) AS SUMA_MILLAS_CONV_T2,
-    SUM(MILLAS_CONV_T3) AS SUMA_MILLAS_CONV_T3,
-    (SUM(MILLAS_TOTAL) / SUM(MILLAS_ANTERIOR)) AS PORCENTAJE_PARTICIPACION_FLOTA_ELECTRICA
-FROM
-    (
-    SELECT *,
-    (MILLAS_ELEC_T1 +
-    MILLAS_ELEC_T2 +
-    MILLAS_ELEC_T3 +
-    MILLAS_CONV_T1 +
-    MILLAS_CONV_T2 +
-    MILLAS_CONV_T3) AS MILLAS_TOTAL,
-    LAG(MILLAS_TOTAL, 1) OVER (ORDER BY id ASC) AS MILLAS_ANTERIOR
-    FROM SCHEMA_TAXIS_NYC_ECODRIVE.PUBLIC.USO_VEHICULOS_ELECTRICOS
-    ) AS A
-GROUP BY FECHA;
-
+            FECHA,
+            SUM(MILLAS_ELEC_T1) AS SUMA_MILLAS_ELEC_T1,
+            SUM(MILLAS_ELEC_T2) AS SUMA_MILLAS_ELEC_T2,
+            SUM(MILLAS_ELEC_T3) AS SUMA_MILLAS_ELEC_T3,
+            SUM(MILLAS_CONV_T1) AS SUMA_MILLAS_CONV_T1,
+            SUM(MILLAS_CONV_T2) AS SUMA_MILLAS_CONV_T2,
+            SUM(MILLAS_CONV_T3) AS SUMA_MILLAS_CONV_T3,
+            (SUM(MILLAS_TOTAL) / SUM(MILLAS_ANTERIOR)) AS PORCENTAJE_PARTICIPACION_FLOTA_ELECTRICA
+        FROM
+            (
+            SELECT *,
+            (MILLAS_ELEC_T1 +
+            MILLAS_ELEC_T2 +
+            MILLAS_ELEC_T3 +
+            MILLAS_CONV_T1 +
+            MILLAS_CONV_T2 +
+            MILLAS_CONV_T3) AS MILLAS_TOTAL,
+            LAG(MILLAS_TOTAL, 1) OVER (ORDER BY id ASC) AS MILLAS_ANTERIOR
+            FROM SCHEMA_TAXIS_NYC_ECODRIVE.PUBLIC.USO_VEHICULOS_ELECTRICOS
+            ) AS A
+        GROUP BY FECHA;
         """
         resultados = ejecutar_consulta(sql_query)
         if resultados is not None:
             st.write(resultados)
             st.success("Consulta ejecutada correctamente.")
+
 
 # Crear la interfaz gráfica con Streamlit
 st.title("Análisis de Uso de Vehículos Eléctricos")
