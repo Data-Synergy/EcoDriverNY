@@ -51,7 +51,6 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 
 # Story Board  + Storytelling
 
-![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/klipartz.com%20(1).png)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Dashboard.jpg)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Mapa2.png)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Panel%20Eficiencia.png)
@@ -112,15 +111,15 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 
   <p>
       
-[1.Dashboard]() 
+[1.Dashboard](https://github.com/Data-Synergy/EcoDriverNY/tree/main?tab=readme-ov-file#story-board---storytelling) 
 
-[2.Notebooks]() 
+[2.Notebooks](https://github.com/Data-Synergy/EcoDriverNY/tree/main/EDAs) 
 
-[3.github/workflows]() 
+[3.github/workflows](https://github.com/Data-Synergy/EcoDriverNY/tree/main/.github/workflows) 
 
 [4.Docs]()
 
-[5.Assets]()
+[5.Assets](https://github.com/Data-Synergy/EcoDriverNY/tree/main/img)
  
 
   </p>
