@@ -51,6 +51,13 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 
 # Story Board  + Storytelling
 
+
+El dashboard del proyecto "OneNYC 2050" es una herramienta integral diseñada para visualizar y monitorear el progreso hacia la transformación de la ciudad de Nueva York en un centro urbano alimentado completamente por energías renovables.
+
+En colaboración con la empresa de taxis EcoDriveNY, este dashboard se centra en el papel crucial que desempeña la movilidad sostenible en esta ambiciosa empresa. Como respuesta a las crecientes preocupaciones ambientales y a la iniciativa global de transición hacia energías más limpias, Nueva York se posiciona como pionera en la adopción de prácticas ecoamigables. 
+
+Este tablero proporciona una visión detallada del avance hacia la eliminación progresiva del uso de combustibles fósiles en el transporte urbano, destacando los esfuerzos de EcoDriveNY para adaptarse a las demandas del mercado y promover un transporte de pasajeros más limpio en la metrópolis. A través de métricas clave, gráficos interactivos y análisis en tiempo real, el dashboard ofrece una ventana transparente hacia el futuro sostenible de Nueva York, reafirmando su compromiso con el bienestar del medio ambiente y sus ciudadanos en el horizonte del año 2050.
+
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/temporalfinal.jpg)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/KPI%20FInal.jpg)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Conclusion.png)
