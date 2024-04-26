@@ -54,7 +54,7 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Dashboard.jpg)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Mapa2.png)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Panel%20Eficiencia.png)
-
+![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Conclusion.png)
 
 # Proceso
 
