@@ -52,6 +52,7 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 # Story Board  + Storytelling
 
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/temporalfinal.jpg)
+![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/KPI%20FInal.jpg)
 ![Mensaje](https://github.com/Data-Synergy/EcoDriverNY/blob/main/img/Conclusion.png)
 
 # Proceso
