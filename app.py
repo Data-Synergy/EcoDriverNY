@@ -5,7 +5,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # Carga del conjunto de datos
-df_electric_tnCO2 = pd.read_csv("data/electric_tnCO2_100mi.csv")
+df_electric_tnCO2 = pd.read_csv("https://raw.githubusercontent.com/Data-Synergy/EcoDriverNY/main/data/electric_tnCO2_100mi.csv")
+
+
 
 # Dividir la columna y asignar nombres a las nuevas columnas
 df_split = df_electric_tnCO2['Category;Model;Model Year;Manufacturer;Fuel;↑ All-Electric Range;Alternative Fuel Economy City;Alternative Fuel Economy Highway;Alternative Fuel Economy Combined;Engine Type;Engine Size;tnco2/100mi;price'].str.split(';', expand=True)
