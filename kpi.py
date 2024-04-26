@@ -1,6 +1,7 @@
 import streamlit as st
 import snowflake.connector
 import pandas as pd
+from datetime import datetime
 
 snowflake_credentials = {
     'user': 'ELIASALMADA1234',
@@ -27,6 +28,7 @@ def ejecutar_consulta(sql_query):
         return None
     finally:
         cursor.close()
+
 def subir_datos_a_base_de_datos(conn, fecha, millas_electrico_turno_1, millas_electrico_turno_2,
                                 millas_electrico_turno_3, millas_convencionales_turno_1,
                                 millas_convencionales_turno_2, millas_convencionales_turno_3):
@@ -50,7 +52,13 @@ def subir_datos_a_base_de_datos(conn, fecha, millas_electrico_turno_1, millas_el
         cursor.close()
 
 def mostrar_interfaz():
-    fecha = st.date_input("Fecha", format="YYYY-MM-DD")  # Forzar el formato de fecha a aaaa-mm-dd
+    # Obtener la fecha actual
+    fecha_actual = datetime.now().strftime('%Y-%m-%d')
+
+    # Mostrar el campo de fecha con la fecha actual pero no editable
+    st.write("Fecha:", fecha_actual)
+
+    # Ingresar las millas con un valor mínimo de 0
     millas_electrico_turno_1 = st.number_input("Millas Eléc. Turno 1", value=0.0, min_value=0.0)
     millas_electrico_turno_2 = st.number_input("Millas Eléc. Turno 2", value=0.0, min_value=0.0)
     millas_electrico_turno_3 = st.number_input("Millas Eléc. Turno 3", value=0.0, min_value=0.0)
@@ -62,7 +70,7 @@ def mostrar_interfaz():
         # Verificar que los valores sean mayores que 0
         if (millas_electrico_turno_1 > 0 and millas_electrico_turno_2 > 0 and millas_electrico_turno_3 > 0 and
             millas_convencionales_turno_1 > 0 and millas_convencionales_turno_2 > 0 and millas_convencionales_turno_3 > 0):
-            subir_datos_a_base_de_datos(conexion, fecha, millas_electrico_turno_1, millas_electrico_turno_2,
+            subir_datos_a_base_de_datos(conexion, fecha_actual, millas_electrico_turno_1, millas_electrico_turno_2,
                                         millas_electrico_turno_3, millas_convencionales_turno_1,
                                         millas_convencionales_turno_2, millas_convencionales_turno_3)
         else:
@@ -91,7 +99,7 @@ def mostrar_interfaz():
             LAG(MILLAS_TOTAL, 1) OVER (ORDER BY id ASC) AS MILLAS_ANTERIOR
             FROM SCHEMA_TAXIS_NYC_ECODRIVE.PUBLIC.USO_VEHICULOS_ELECTRICOS
             ) AS A
-        GROUP BY FECHA;
+        GROUP BY FECHA ORDER BY FECHA DESC;
         """
         resultados = ejecutar_consulta(sql_query)
         if resultados is not None:
