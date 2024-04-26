@@ -89,24 +89,6 @@ Nuestro equipo es contratado por la empresa, con el objetivo de acompañar al ne
 </details>
 
 <details>
-  <summary style="cursor: s-resize; user-select: none; position: relative;"> Documentación </summary>
-
-  <p>
-      
-[Pautas]()
-      
-[Resumen Ejecutivo]()
-
-[Reporte Técnico]()
-
-[Referencias]()
-
-[Conclusiones]()
-
-  </p>
-</details>
-
-<details>
   <summary style="cursor: s-resize; user-select: none; position: relative;"> Estructura del Repositorio </summary>
 
   <p>
