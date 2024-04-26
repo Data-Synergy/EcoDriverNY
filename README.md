@@ -104,15 +104,15 @@ A través de métricas clave, gráficos interactivos y análisis en tiempo real,
 
   <p>
       
-[1.Dashboard](https://github.com/Data-Synergy/EcoDriverNY/tree/main?tab=readme-ov-file#story-board---storytelling) 
+[1.Dashboard]() 
 
-[2.Notebooks](https://github.com/Data-Synergy/EcoDriverNY/tree/main/EDAs) 
+[2.Notebooks]() 
 
-[3.github/workflows](https://github.com/Data-Synergy/EcoDriverNY/tree/main/.github/workflows) 
+[3.github/workflows]() 
 
 [4.Docs]()
 
-[5.Assets](https://github.com/Data-Synergy/EcoDriverNY/tree/main/img)
+[5.Assets]()
  
 
   </p>
