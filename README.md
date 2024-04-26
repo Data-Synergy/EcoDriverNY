@@ -2,7 +2,7 @@
 
 <div>
     <div align='center'>
-    <a href="https://foremost-level-098.notion.site/NYC-Proyecto-de-Reducci-n-de-Emisiones-de-Carbono-ea199d70daeb4fa0a851d875e83f006c" target="_blank" target="_blank">
+    <a href="https://app.powerbi.com/view?r=eyJrIjoiZTBhYTE5YTUtY2JkMC00MGUwLWIyYzAtOGMyZDc0N2VkNjQ3IiwidCI6ImRmODY3OWNkLWE4MGUtNDVkOC05OWFjLWM4M2VkN2ZmOTVhMCJ9" target="_blank" target="_blank">
           <img  src="img/h.png"/>
        </a>
    <a href="https://youtu.be/P6u2y_XmpLY">
